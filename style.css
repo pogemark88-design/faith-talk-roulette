@@ -137,6 +137,30 @@ body[data-mode="light"] {
 
 .topbar-controls { display: flex; align-items: center; gap: 14px; }
 
+.lang-picker {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+}
+.lang-btn {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  transition: background .18s ease, color .18s ease;
+}
+.lang-btn:hover { color: var(--text); }
+.lang-btn[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
 .theme-picker {
   display: flex;
   align-items: center;
@@ -534,6 +558,7 @@ body[data-mode="dark"] .icon-moon { display: block; }
   .topbar { padding: 16px 14px; }
   .theme-picker { gap: 5px; padding: 5px; }
   .theme-swatch { width: 16px; height: 16px; }
+  .lang-btn { padding: 5px 9px; font-size: 10px; }
   .brand-text { font-size: 13px; }
   .wheel-wrap { width: 82vw; }
   .spin-btn { padding: 16px 48px; font-size: 15.5px; width: min(280px, 78vw); }
@@ -541,7 +566,8 @@ body[data-mode="dark"] .icon-moon { display: block; }
 }
 
 @media (max-width: 380px) {
-  .topbar-controls { gap: 8px; }
+  .topbar-controls { gap: 6px; }
+  .lang-btn { padding: 4px 7px; }
 }
 
 /* landscape phones: shrink vertical rhythm */
@@ -558,5 +584,3 @@ body[data-mode="dark"] .icon-moon { display: block; }
   .modal-backdrop, .modal-card { animation: none !important; }
   .icon-btn, .spin-btn, .modal-btn, .theme-swatch { transition: none !important; }
 }
-
-.language-control{display:inline-flex;align-items:center;gap:7px;padding:7px 9px;border:1px solid var(--card-border);border-radius:999px;background:var(--card);color:var(--text-muted);font-size:9px;font-weight:800;letter-spacing:.12em}.language-control select{appearance:none;border:0;outline:0;background:transparent;color:var(--text);font:inherit;letter-spacing:.04em;cursor:pointer}.language-control option{color:#111;background:#fff}.full-reset-btn{padding:8px 11px;border:1px solid var(--card-border);border-radius:999px;background:transparent;color:var(--text-muted);font-size:9px;font-weight:800;letter-spacing:.12em;transition:.2s ease}.full-reset-btn:hover{color:var(--text);border-color:var(--accent)}@media(max-width:700px){.language-control span{display:none}.language-control{padding:7px 8px}.full-reset-btn{font-size:8px;padding:8px 9px}}
