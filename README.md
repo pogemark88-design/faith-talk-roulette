@@ -1,6 +1,9 @@
+[README.md](https://github.com/user-attachments/files/31066089/README.md)
 # Faith Talk Roulette
 
 A clean, modern roulette wheel for Faith Talk conversation nights. Spin the wheel, land on a number 1–100, and a themed popup reveals that number's category and question. Every number is removed from the pool once used, so a game never repeats a question.
+
+The 100 questions are personal and reflective ("Faith Talk Personal") rather than textbook-style, and every question is available in **Tagalog (default) and English** via the language switcher in the top bar.
 
 **100% static** — HTML, CSS, and vanilla JavaScript only. No build step, no dependencies, no backend. Works out of the box on GitHub Pages.
 
@@ -25,20 +28,26 @@ faith-talk-roulette/
 
 ## Editing the questions
 
-All 100 questions live in one place near the top of `script.js`, in the `QUESTIONS` object:
+All 100 questions live in one place near the top of `script.js`, in the `QUESTIONS` object. Each entry has a category id and a bilingual question:
 
 ```javascript
 const QUESTIONS = {
-  1: { category: "PERSONAL FAITH", question: "What quality of Jehovah do you admire most?" },
-  2: { category: "PERSONAL FAITH", question: "Why is prayer important?" },
+  1: { cat: "PERSONAL_FAITH", question: {
+        en: "What is something about Jehovah that you personally appreciate the most?",
+        tl: "Ano ang isang bagay tungkol kay Jehova na talagang pinahahalagahan mo?"
+      } },
   // ...
-  100: { category: "PERSONAL FAITH", question: "What is one thing you can do this week..." }
+  100: { cat: "FUTURE_HOPE", question: { en: "...", tl: "..." } }
 };
 ```
 
-Each key (1–100) must stay unique and map to exactly one `{ category, question }` pair. The wheel only ever displays the number — the category and question appear solely inside the popup.
+Each key (1–100) must stay unique, and every entry needs both an `en` and a `tl` question. The wheel only ever displays the number — the category and question appear solely inside the popup, in whichever language is currently selected.
 
-Available categories (and their popup accent colors) are defined in `CATEGORY_ACCENTS`, also in `script.js`.
+Category ids map to their bilingual labels in `CATEGORIES`, and to their popup accent colors in `CATEGORY_ACCENTS` — both also in `script.js`. The eleven categories are: Personal Faith, Prayer, Bible, Gratitude, Challenges, Family, Friendships, Congregation, Ministry, Spiritual Growth, and Future & Hope.
+
+## Language
+
+Tagalog is the default language. A "TL / EN" switcher sits in the top bar; the choice is saved to `localStorage` and persists across visits. Switching languages only changes the displayed text — it never resets progress, the wheel, the theme, or the used-question history. All static interface text (buttons, labels, modal copy) lives in the `UI_STRINGS` object in `script.js`.
 
 ## Customizing themes
 
