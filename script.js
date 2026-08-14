@@ -17,106 +17,106 @@
 /* Every number 1–100 maps to exactly one category + question.
    This is the single source of truth for wheel + popup content. */
 const QUESTIONS = {
-  1:   { category: "PERSONAL FAITH",  question: "What quality of Jehovah do you admire most?" },
-  2:   { category: "PERSONAL FAITH",  question: "Why is prayer important?" },
-  3:   { category: "CHRISTIAN LIFE",  question: "What does it mean to imitate Jesus?" },
-  4:   { category: "PERSONAL FAITH",  question: "How can we strengthen our faith?" },
-  5:   { category: "CHRISTIAN LIFE",  question: "Why should Christians choose friends carefully?" },
-  6:   { category: "FUTURE & HOPE",   question: "What does the Kingdom of God mean to you?" },
-  7:   { category: "BIBLE",           question: "How can the Bible guide our decisions?" },
-  8:   { category: "CHRISTIAN LIFE",  question: "Why is forgiveness important?" },
-  9:   { category: "CONGREGATION",    question: "How can we encourage someone who is discouraged?" },
-  10:  { category: "MINISTRY",        question: "What motivates us to share our faith?" },
-  11:  { category: "PERSONAL FAITH",  question: "Who is Jehovah?" },
-  12:  { category: "CHRISTIAN LIFE",  question: "How can we show self-control?" },
-  13:  { category: "CHALLENGES",      question: "What can we learn from Job\u2019s endurance?" },
-  14:  { category: "CONGREGATION",    question: "Why should we attend congregation meetings regularly?" },
-  15:  { category: "PERSONAL FAITH",  question: "What is faith?" },
-  16:  { category: "PERSONAL FAITH",  question: "How can we become closer to Jehovah?" },
-  17:  { category: "CHRISTIAN LIFE",  question: "Why is honesty important?" },
-  18:  { category: "CHALLENGES",      question: "How can prayer help us when we are worried?" },
-  19:  { category: "CHRISTIAN LIFE",  question: "What qualities make someone a good friend?" },
-  20:  { category: "MINISTRY",        question: "Why do Jehovah\u2019s Witnesses preach?" },
-  21:  { category: "BIBLE",           question: "How can we make personal Bible study more meaningful?" },
-  22:  { category: "PERSONAL FAITH",  question: "Why should we trust Jehovah\u2019s direction?" },
-  23:  { category: "CHRISTIAN LIFE",  question: "How can we show love to others?" },
-  24:  { category: "PERSONAL FAITH",  question: "What spiritual goals can we set?" },
-  25:  { category: "BIBLE",           question: "What does Jehovah\u2019s name mean?" },
-  26:  { category: "CHALLENGES",      question: "How can we remain positive during difficult circumstances?" },
-  27:  { category: "CONGREGATION",    question: "Why is congregation association important?" },
-  28:  { category: "PERSONAL FAITH",  question: "What can weaken our faith?" },
-  29:  { category: "FAMILY",          question: "How can we show appreciation for family members?" },
-  30:  { category: "MINISTRY",        question: "What can we learn from Jesus\u2019 example in the ministry?" },
-  31:  { category: "BIBLE",           question: "Why should we meditate on what we read?" },
-  32:  { category: "PERSONAL FAITH",  question: "How does Jehovah show patience?" },
-  33:  { category: "CONGREGATION",    question: "Why is unity important among Christians?" },
-  34:  { category: "MINISTRY",        question: "How can we improve our teaching ability?" },
-  35:  { category: "BIBLE",           question: "What Bible principle has helped you personally?" },
-  36:  { category: "CHALLENGES",      question: "How can we maintain spiritual routines during stressful periods?" },
-  37:  { category: "PERSONAL FAITH",  question: "Why should we pray for others?" },
-  38:  { category: "YOUNG ONES",      question: "How can young ones contribute to the congregation?" },
-  39:  { category: "PERSONAL FAITH",  question: "What does dedication to Jehovah mean?" },
-  40:  { category: "CHRISTIAN LIFE",  question: "How can we avoid judging others unfairly?" },
-  41:  { category: "BIBLE",           question: "Why is Jehovah\u2019s name important?" },
-  42:  { category: "PERSONAL FAITH",  question: "How can we strengthen our relationship with Jehovah through prayer?" },
-  43:  { category: "CHRISTIAN LIFE",  question: "What does it mean to have a clean conscience?" },
-  44:  { category: "MINISTRY",        question: "Why is patience important in the ministry?" },
-  45:  { category: "FAMILY",          question: "How can family members strengthen one another spiritually?" },
-  46:  { category: "FUTURE & HOPE",   question: "What hope does Jehovah give mankind?" },
-  47:  { category: "BIBLE",           question: "Why is regular Bible reading important?" },
-  48:  { category: "CHALLENGES",      question: "How can we respond when someone treats us unfairly?" },
-  49:  { category: "BIBLE",           question: "What Bible account inspires you most?" },
-  50:  { category: "CONGREGATION",    question: "How can we seek help when we need encouragement?" },
-  51:  { category: "PERSONAL FAITH",  question: "How does Jehovah show love?" },
-  52:  { category: "CONGREGATION",    question: "Why should we cooperate with congregation arrangements?" },
-  53:  { category: "MINISTRY",        question: "How can we use Bible verses effectively?" },
-  54:  { category: "PERSONAL FAITH",  question: "What does baptism mean to you?" },
-  55:  { category: "CHRISTIAN LIFE",  question: "Why should Christians be humble?" },
-  56:  { category: "CHALLENGES",      question: "How can trials strengthen our faith?" },
-  57:  { category: "MINISTRY",        question: "How can we show genuine interest in people in the ministry?" },
-  58:  { category: "CHRISTIAN LIFE",  question: "How can we avoid harmful influences?" },
-  59:  { category: "PERSONAL FAITH",  question: "Why should we thank Jehovah in prayer?" },
-  60:  { category: "CHRISTIAN LIFE",  question: "How can we be a better friend to others?" },
-  61:  { category: "PERSONAL FAITH",  question: "What does it mean to dedicate yourself to Jehovah?" },
-  62:  { category: "BIBLE",           question: "How can we apply Bible counsel in everyday life?" },
-  63:  { category: "BIBLE",           question: "What can we learn from Bible characters who made mistakes?" },
-  64:  { category: "FUTURE & HOPE",   question: "Why should we focus on Jehovah\u2019s promises?" },
-  65:  { category: "CONGREGATION",    question: "How can we encourage our brothers and sisters?" },
-  66:  { category: "PERSONAL FAITH",  question: "How can we make our prayers more specific?" },
-  67:  { category: "FAMILY",          question: "Why is communication important in a family?" },
-  68:  { category: "BIBLE",           question: "What does Jehovah want humans to know about him?" },
-  69:  { category: "MINISTRY",        question: "How can we become more confident in the ministry?" },
-  70:  { category: "PERSONAL FAITH",  question: "Why should we continue making spiritual progress?" },
-  71:  { category: "PERSONAL FAITH",  question: "How does Jehovah show justice?" },
-  72:  { category: "CONGREGATION",    question: "How can we benefit more from congregation meetings?" },
-  73:  { category: "PERSONAL FAITH",  question: "What subjects should we include in our prayers?" },
-  74:  { category: "CHRISTIAN LIFE",  question: "How can we control our speech?" },
-  75:  { category: "PERSONAL FAITH",  question: "Why is faith important?" },
-  76:  { category: "FAMILY",          question: "How can we encourage a family member who is struggling?" },
-  77:  { category: "CHALLENGES",      question: "What helps us keep serving Jehovah despite difficulties?" },
-  78:  { category: "MINISTRY",        question: "How can we start conversations about the Bible?" },
-  79:  { category: "PERSONAL FAITH",  question: "Why should we pray before making important decisions?" },
-  80:  { category: "CHRISTIAN LIFE",  question: "How can we use our abilities to serve Jehovah?" },
-  81:  { category: "CONGREGATION",    question: "How can we show love to those who are discouraged?" },
-  82:  { category: "BIBLE",           question: "What can we learn from Jesus\u2019 prayers?" },
-  83:  { category: "CHALLENGES",      question: "Why should we avoid allowing disappointment to weaken our faith?" },
-  84:  { category: "CONGREGATION",    question: "How can we make the congregation a more encouraging place?" },
-  85:  { category: "CHALLENGES",      question: "How can we remain faithful during difficult times?" },
-  86:  { category: "FAMILY",          question: "How can parents set a good spiritual example?" },
-  87:  { category: "CHRISTIAN LIFE",  question: "Why should we choose our entertainment carefully?" },
-  88:  { category: "PERSONAL FAITH",  question: "How can we strengthen our friendship with Jehovah?" },
-  89:  { category: "CHRISTIAN LIFE",  question: "Why is humility important in Christian relationships?" },
-  90:  { category: "MINISTRY",        question: "How can we improve our personal ministry?" },
-  91:  { category: "FAMILY",          question: "How can we show respect to our parents?" },
-  92:  { category: "PERSONAL FAITH",  question: "Why should we rely on Jehovah when making decisions?" },
-  93:  { category: "FUTURE & HOPE",   question: "How can our future hope affect the way we live today?" },
-  94:  { category: "PERSONAL FAITH",  question: "What is prayer?" },
-  95:  { category: "BIBLE",           question: "Why should we continue studying the Bible?" },
-  96:  { category: "CHALLENGES",      question: "How can we deal with anxiety through spiritual activities?" },
-  97:  { category: "PERSONAL FAITH",  question: "What is one spiritual goal you would like to accomplish?" },
-  98:  { category: "PERSONAL FAITH",  question: "How can we show that our faith is genuine?" },
-  99:  { category: "CHRISTIAN LIFE",  question: "Why is love such an important Christian quality?" },
-  100: { category: "PERSONAL FAITH",  question: "What is one thing you can do this week to strengthen your friendship with Jehovah?" }
+  1: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "How does this personally affect your faith and your life?", tl: "Ano ang personal mong nararanasan tungkol sa pakikipagkaibigan mo kay Jehova?" } },
+  2: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "How has prayer personally helped you, and why is it important to you?", tl: "Ano ang personal mong nararanasan tungkol sa pananampalataya mo?" } },
+  3: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "What does it mean to imitate Jesus in your own life?", tl: "Ano ang personal mong nararanasan tungkol sa pagpapakumbaba mo?" } },
+  4: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "What has personally strengthened your faith the most?", tl: "Ano ang personal mong nararanasan tungkol sa pag-asa mo?" } },
+  5: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "How have your friendships affected your relationship with Jehovah?", tl: "Ano ang personal mong nararanasan tungkol sa mga desisyon mo?" } },
+  6: { category: { en: "FUTURE & HOPE", tl: "HINAHARAP AT PAG-ASA" }, question: { en: "What does the Kingdom of God personally mean to you?", tl: "Ano ang personal mong nararanasan tungkol sa tao na gusto mong maging?" } },
+  7: { category: { en: "BIBLE", tl: "BIBLIYA" }, question: { en: "How does this personally affect your faith and your life?", tl: "Ano ang personal mong nararanasan tungkol sa pagbubulay-bulay mo?" } },
+  8: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "Why is forgiveness important personally meaningful to you?", tl: "Ano ang personal mong nararanasan tungkol sa pagiging mapagmahal mo?" } },
+  9: { category: { en: "CONGREGATION", tl: "KONGREGASYON" }, question: { en: "How do you personally encourage someone who is discouraged?", tl: "Ano ang personal mong nararanasan tungkol sa pakikipagtulungan mo sa mga kaayusan?" } },
+  10: { category: { en: "MINISTRY", tl: "MINISTERYO" }, question: { en: "How does this personally affect your faith and your life?", tl: "Ano ang personal mong nararanasan tungkol sa pagmamahal mo sa ministeryo?" } },
+  11: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "Who is Jehovah to you, and how does knowing him affect your life?", tl: "Paano nakaapekto sa iyo ang pakikipagkaibigan mo kay Jehova?" } },
+  12: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "How do you personally show self-control?", tl: "Paano nakaapekto sa iyo ang pagiging tapat mo?" } },
+  13: { category: { en: "CHALLENGES", tl: "MGA HAMON" }, question: { en: "What can you personally learn from job’s endurance?", tl: "Paano nakaapekto sa iyo ang pagpapanatili ng pananampalataya?" } },
+  14: { category: { en: "CONGREGATION", tl: "KONGREGASYON" }, question: { en: "Why is it personally important to you that we attend congregation meetings regularly?", tl: "Paano nakaapekto sa iyo ang pagtulong mo sa kongregasyon?" } },
+  15: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "What does faith personally mean to you?", tl: "Paano nakaapekto sa iyo ang personal mong paninindigan?" } },
+  16: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "What helps you personally feel closer to Jehovah?", tl: "Paano nakaapekto sa iyo ang paglago mo bilang Kristiyano?" } },
+  17: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "When has honesty personally helped you?", tl: "Paano nakaapekto sa iyo ang pakikitungo mo sa iba?" } },
+  18: { category: { en: "CHALLENGES", tl: "MGA HAMON" }, question: { en: "How does this personally affect your faith and your life?", tl: "Paano nakaapekto sa iyo ang pag-asa kay Jehova sa mahirap na panahon?" } },
+  19: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "How does this personally affect your faith and your life?", tl: "Paano nakaapekto sa iyo ang konsensiya mo?" } },
+  20: { category: { en: "MINISTRY", tl: "MINISTERYO" }, question: { en: "How does this personally affect your faith and your life?", tl: "Paano nakaapekto sa iyo ang pagmamahal mo sa ministeryo?" } },
+  21: { category: { en: "BIBLE", tl: "BIBLIYA" }, question: { en: "How do you personally make personal bible study more meaningful?", tl: "Ano ang pinakamahalaga para sa iyo tungkol sa personal mong Bible study?" } },
+  22: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "Why is it personally important to you that we trust jehovah’s direction?", tl: "Ano ang pinakamahalaga para sa iyo tungkol sa pananampalataya mo?" } },
+  23: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "How do you personally try to show love to others?", tl: "Ano ang pinakamahalaga para sa iyo tungkol sa pagpapakumbaba mo?" } },
+  24: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "What spiritual goal do you personally want to achieve?", tl: "Ano ang pinakamahalaga para sa iyo tungkol sa pag-asa mo?" } },
+  25: { category: { en: "BIBLE", tl: "BIBLIYA" }, question: { en: "What does Jehovah’s name mean in your own life?", tl: "Ano ang pinakamahalaga para sa iyo tungkol sa paglalapat ng payo ng Bibliya?" } },
+  26: { category: { en: "CHALLENGES", tl: "MGA HAMON" }, question: { en: "How do you personally remain positive during difficult circumstances?", tl: "Ano ang pinakamahalaga para sa iyo tungkol sa pagiging matiyaga?" } },
+  27: { category: { en: "CONGREGATION", tl: "KONGREGASYON" }, question: { en: "Why is congregation association important personally meaningful to you?", tl: "Ano ang pinakamahalaga para sa iyo tungkol sa pagpapakita mo ng pag-ibig?" } },
+  28: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "How does this personally affect your faith and your life?", tl: "Ano ang pinakamahalaga para sa iyo tungkol sa pagkakilala mo kay Jehova?" } },
+  29: { category: { en: "FAMILY", tl: "PAMILYA" }, question: { en: "How do you personally show appreciation for family members?", tl: "Ano ang pinakamahalaga para sa iyo tungkol sa mga natutuhan mo sa pamilya?" } },
+  30: { category: { en: "MINISTRY", tl: "MINISTERYO" }, question: { en: "What can you personally learn from jesus’ example in the ministry?", tl: "Ano ang pinakamahalaga para sa iyo tungkol sa pagmamahal mo sa ministeryo?" } },
+  31: { category: { en: "BIBLE", tl: "BIBLIYA" }, question: { en: "Why is it personally important to you that we meditate on what we read?", tl: "Ano ang natutuhan mo mula sa personal mong Bible study?" } },
+  32: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "How does Jehovah show patience in your own life?", tl: "Ano ang natutuhan mo mula sa pananampalataya mo?" } },
+  33: { category: { en: "CONGREGATION", tl: "KONGREGASYON" }, question: { en: "Why is unity important among Christians personally meaningful to you?", tl: "Ano ang natutuhan mo mula sa pagbibigay mo ng pampatibay?" } },
+  34: { category: { en: "MINISTRY", tl: "MINISTERYO" }, question: { en: "How do you personally improve our teaching ability?", tl: "Ano ang natutuhan mo mula sa pagtuturo mo sa Bibliya?" } },
+  35: { category: { en: "BIBLE", tl: "BIBLIYA" }, question: { en: "How does this personally affect your faith and your life?", tl: "Ano ang natutuhan mo mula sa paglalapat ng payo ng Bibliya?" } },
+  36: { category: { en: "CHALLENGES", tl: "MGA HAMON" }, question: { en: "How do you personally maintain spiritual routines during stressful periods?", tl: "Ano ang natutuhan mo mula sa pagiging matiyaga?" } },
+  37: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "How has praying for other people affected you personally?", tl: "Ano ang natutuhan mo mula sa mga espirituwal na priyoridad mo?" } },
+  38: { category: { en: "YOUNG ONES", tl: "MGA KABATAAN" }, question: { en: "How does this personally affect your faith and your life?", tl: "Ano ang natutuhan mo mula sa pagkakilala mo kay Jehova?" } },
+  39: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "What does dedication to Jehovah mean in your own life?", tl: "Ano ang natutuhan mo mula sa mga pagpapalang natatanggap mo?" } },
+  40: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "How do you personally avoid judging others unfairly?", tl: "Ano ang natutuhan mo mula sa pagiging mabuting halimbawa?" } },
+  41: { category: { en: "BIBLE", tl: "BIBLIYA" }, question: { en: "Why is Jehovah’s name important personally meaningful to you?", tl: "Ano ang gusto mong mas pagbutihin pagdating sa personal mong Bible study?" } },
+  42: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "How do you personally strengthen our relationship with jehovah through prayer?", tl: "Ano ang gusto mong mas pagbutihin pagdating sa pananampalataya mo?" } },
+  43: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "What does it mean to have a clean conscience in your own life?", tl: "Ano ang gusto mong mas pagbutihin pagdating sa pagpapakumbaba mo?" } },
+  44: { category: { en: "MINISTRY", tl: "MINISTERYO" }, question: { en: "Why is patience important in the ministry personally meaningful to you?", tl: "Ano ang gusto mong mas pagbutihin pagdating sa pagtuturo mo sa Bibliya?" } },
+  45: { category: { en: "FAMILY", tl: "PAMILYA" }, question: { en: "How does this personally affect your faith and your life?", tl: "Ano ang gusto mong mas pagbutihin pagdating sa pagpapahalaga mo sa mga magulang?" } },
+  46: { category: { en: "FUTURE & HOPE", tl: "HINAHARAP AT PAG-ASA" }, question: { en: "How does this personally affect your faith and your life?", tl: "Ano ang gusto mong mas pagbutihin pagdating sa tao na gusto mong maging?" } },
+  47: { category: { en: "BIBLE", tl: "BIBLIYA" }, question: { en: "Why is regular Bible reading important personally meaningful to you?", tl: "Ano ang gusto mong mas pagbutihin pagdating sa pagbubulay-bulay mo?" } },
+  48: { category: { en: "CHALLENGES", tl: "MGA HAMON" }, question: { en: "How do you personally respond when someone treats us unfairly?", tl: "Ano ang gusto mong mas pagbutihin pagdating sa pag-asa kay Jehova sa mahirap na panahon?" } },
+  49: { category: { en: "BIBLE", tl: "BIBLIYA" }, question: { en: "How does this personally affect your faith and your life?", tl: "Ano ang gusto mong mas pagbutihin pagdating sa pag-unawa mo sa Kasulatan?" } },
+  50: { category: { en: "CONGREGATION", tl: "KONGREGASYON" }, question: { en: "How do you personally seek help when we need encouragement?", tl: "Ano ang gusto mong mas pagbutihin pagdating sa mga karanasan mo sa kongregasyon?" } },
+  51: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "How does Jehovah show love in your own life?", tl: "Ano ang nakakatulong sa iyo pagdating sa pakikipagkaibigan mo kay Jehova?" } },
+  52: { category: { en: "CONGREGATION", tl: "KONGREGASYON" }, question: { en: "Why is it personally important to you that we cooperate with congregation arrangements?", tl: "Ano ang nakakatulong sa iyo pagdating sa pagdalo mo sa mga pulong?" } },
+  53: { category: { en: "MINISTRY", tl: "MINISTERYO" }, question: { en: "How do you personally use bible verses effectively?", tl: "Ano ang nakakatulong sa iyo pagdating sa pakikipag-usap mo sa mga tao?" } },
+  54: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "What does baptism mean to you in your own life?", tl: "Ano ang nakakatulong sa iyo pagdating sa pag-asa mo?" } },
+  55: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "How does this personally affect your faith and your life?", tl: "Ano ang nakakatulong sa iyo pagdating sa mga desisyon mo?" } },
+  56: { category: { en: "CHALLENGES", tl: "MGA HAMON" }, question: { en: "How does this personally affect your faith and your life?", tl: "Ano ang nakakatulong sa iyo pagdating sa pagiging matiyaga?" } },
+  57: { category: { en: "MINISTRY", tl: "MINISTERYO" }, question: { en: "How do you personally show genuine interest in people in the ministry?", tl: "Ano ang nakakatulong sa iyo pagdating sa pagiging matiyaga mo sa ministeryo?" } },
+  58: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "How do you personally avoid harmful influences?", tl: "Ano ang nakakatulong sa iyo pagdating sa pagiging mapagmahal mo?" } },
+  59: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "What do you personally thank Jehovah for in your prayers?", tl: "Ano ang nakakatulong sa iyo pagdating sa mga pagpapalang natatanggap mo?" } },
+  60: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "What do you personally do to be a better friend?", tl: "Ano ang nakakatulong sa iyo pagdating sa pagiging mabuting halimbawa?" } },
+  61: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "What does it mean to dedicate yourself to Jehovah in your own life?", tl: "May karanasan ka bang talagang nagpatibay sa iyo tungkol sa pakikipagkaibigan mo kay Jehova?" } },
+  62: { category: { en: "BIBLE", tl: "BIBLIYA" }, question: { en: "How do you personally apply bible counsel in everyday life?", tl: "May karanasan ka bang talagang nagpatibay sa iyo tungkol sa pagbabasa mo ng Bibliya?" } },
+  63: { category: { en: "BIBLE", tl: "BIBLIYA" }, question: { en: "What can you personally learn from bible characters who made mistakes?", tl: "May karanasan ka bang talagang nagpatibay sa iyo tungkol sa paborito mong ulat sa Bibliya?" } },
+  64: { category: { en: "FUTURE & HOPE", tl: "HINAHARAP AT PAG-ASA" }, question: { en: "Why is it personally important to you that we focus on jehovah’s promises?", tl: "May karanasan ka bang talagang nagpatibay sa iyo tungkol sa mga espirituwal mong pangarap?" } },
+  65: { category: { en: "CONGREGATION", tl: "KONGREGASYON" }, question: { en: "How do you personally encourage our brothers and sisters?", tl: "May karanasan ka bang talagang nagpatibay sa iyo tungkol sa pagiging bahagi mo ng kongregasyon?" } },
+  66: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "How do you personally make our prayers more specific?", tl: "May karanasan ka bang talagang nagpatibay sa iyo tungkol sa paglago mo bilang Kristiyano?" } },
+  67: { category: { en: "FAMILY", tl: "PAMILYA" }, question: { en: "Why is communication important in a family personally meaningful to you?", tl: "May karanasan ka bang talagang nagpatibay sa iyo tungkol sa mga espirituwal na pag-uusap ninyo?" } },
+  68: { category: { en: "BIBLE", tl: "BIBLIYA" }, question: { en: "What does Jehovah want humans to know about him in your own life?", tl: "May karanasan ka bang talagang nagpatibay sa iyo tungkol sa pagkatuto mo mula sa Bibliya?" } },
+  69: { category: { en: "MINISTRY", tl: "MINISTERYO" }, question: { en: "How do you personally become more confident in the ministry?", tl: "May karanasan ka bang talagang nagpatibay sa iyo tungkol sa mga kakayahan mo sa ministeryo?" } },
+  70: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "What motivates you personally to keep making spiritual progress?", tl: "May karanasan ka bang talagang nagpatibay sa iyo tungkol sa halimbawa mo sa iba?" } },
+  71: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "How does Jehovah show justice in your own life?", tl: "Paano mo gustong lumago pagdating sa pakikipagkaibigan mo kay Jehova?" } },
+  72: { category: { en: "CONGREGATION", tl: "KONGREGASYON" }, question: { en: "How do you personally benefit more from congregation meetings?", tl: "Paano mo gustong lumago pagdating sa pagdalo mo sa mga pulong?" } },
+  73: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "How does this personally affect your faith and your life?", tl: "Paano mo gustong lumago pagdating sa paglapit mo kay Jehova?" } },
+  74: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "How do you personally control our speech?", tl: "Paano mo gustong lumago pagdating sa pagpili mo ng entertainment?" } },
+  75: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "Why is faith personally important to you?", tl: "Paano mo gustong lumago pagdating sa personal mong paninindigan?" } },
+  76: { category: { en: "FAMILY", tl: "PAMILYA" }, question: { en: "How do you personally encourage a family member who is struggling?", tl: "Paano mo gustong lumago pagdating sa pagtutulungan ninyo sa espirituwal na paraan?" } },
+  77: { category: { en: "CHALLENGES", tl: "MGA HAMON" }, question: { en: "How does this personally affect your faith and your life?", tl: "Paano mo gustong lumago pagdating sa pag-iwas sa masasamang impluwensiya?" } },
+  78: { category: { en: "MINISTRY", tl: "MINISTERYO" }, question: { en: "How do you personally start conversations about the bible?", tl: "Paano mo gustong lumago pagdating sa pagpapakita mo ng interes sa tao?" } },
+  79: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "Why is it personally important to you that we pray before making important decisions?", tl: "Paano mo gustong lumago pagdating sa mga pagpapalang natatanggap mo?" } },
+  80: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "How do you personally use our abilities to serve jehovah?", tl: "Paano mo gustong lumago pagdating sa pagiging mabuting halimbawa?" } },
+  81: { category: { en: "CONGREGATION", tl: "KONGREGASYON" }, question: { en: "How do you personally show love to those who are discouraged?", tl: "Ano ang isang bagay na ipinagpapasalamat mo tungkol sa pakikisama mo sa mga kapatid?" } },
+  82: { category: { en: "BIBLE", tl: "BIBLIYA" }, question: { en: "What can you personally learn from jesus’ prayers?", tl: "Ano ang isang bagay na ipinagpapasalamat mo tungkol sa pagbabasa mo ng Bibliya?" } },
+  83: { category: { en: "CHALLENGES", tl: "MGA HAMON" }, question: { en: "Why is it personally important to you that we avoid allowing disappointment to weaken our faith?", tl: "Ano ang isang bagay na ipinagpapasalamat mo tungkol sa pagpapanatili ng pananampalataya?" } },
+  84: { category: { en: "CONGREGATION", tl: "KONGREGASYON" }, question: { en: "How do you personally make the congregation a more encouraging place?", tl: "Ano ang isang bagay na ipinagpapasalamat mo tungkol sa pagtulong mo sa kongregasyon?" } },
+  85: { category: { en: "CHALLENGES", tl: "MGA HAMON" }, question: { en: "How do you personally remain faithful during difficult times?", tl: "Ano ang isang bagay na ipinagpapasalamat mo tungkol sa pagpapatawad?" } },
+  86: { category: { en: "FAMILY", tl: "PAMILYA" }, question: { en: "How does this personally affect your faith and your life?", tl: "Ano ang isang bagay na ipinagpapasalamat mo tungkol sa pagtutulungan ninyo sa espirituwal na paraan?" } },
+  87: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "Why is it personally important to you that we choose our entertainment carefully?", tl: "Ano ang isang bagay na ipinagpapasalamat mo tungkol sa pakikitungo mo sa iba?" } },
+  88: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "What personally helps you strengthen your friendship with Jehovah?", tl: "Ano ang isang bagay na ipinagpapasalamat mo tungkol sa pagkakilala mo kay Jehova?" } },
+  89: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "Why is humility important in Christian relationships personally meaningful to you?", tl: "Ano ang isang bagay na ipinagpapasalamat mo tungkol sa konsensiya mo?" } },
+  90: { category: { en: "MINISTRY", tl: "MINISTERYO" }, question: { en: "How do you personally improve our personal ministry?", tl: "Ano ang isang bagay na ipinagpapasalamat mo tungkol sa pagmamahal mo sa ministeryo?" } },
+  91: { category: { en: "FAMILY", tl: "PAMILYA" }, question: { en: "How do you personally show respect to our parents?", tl: "Ano ang gusto mong maalala tungkol sa pamilya mo sa hinaharap?" } },
+  92: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "Why is it personally important to you that we rely on jehovah when making decisions?", tl: "Ano ang gusto mong maalala tungkol sa pananampalataya mo sa hinaharap?" } },
+  93: { category: { en: "FUTURE & HOPE", tl: "HINAHARAP AT PAG-ASA" }, question: { en: "How does this personally affect your faith and your life?", tl: "Ano ang gusto mong maalala tungkol sa Kaharian ng Diyos sa hinaharap?" } },
+  94: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "What does prayer personally mean to you?", tl: "Ano ang gusto mong maalala tungkol sa pag-asa mo sa hinaharap?" } },
+  95: { category: { en: "BIBLE", tl: "BIBLIYA" }, question: { en: "Why is it personally important to you that we continue studying the bible?", tl: "Ano ang gusto mong maalala tungkol sa paglalapat ng payo ng Bibliya sa hinaharap?" } },
+  96: { category: { en: "CHALLENGES", tl: "MGA HAMON" }, question: { en: "How do you personally deal with anxiety through spiritual activities?", tl: "Ano ang gusto mong maalala tungkol sa pagiging matiyaga sa hinaharap?" } },
+  97: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "What is one spiritual goal you personally want to accomplish?", tl: "Ano ang gusto mong maalala tungkol sa mga espirituwal na priyoridad mo sa hinaharap?" } },
+  98: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "How do you personally show that our faith is genuine?", tl: "Ano ang gusto mong maalala tungkol sa pagkakilala mo kay Jehova sa hinaharap?" } },
+  99: { category: { en: "CHRISTIAN LIFE", tl: "BUHAY BILANG KRISTIYANO" }, question: { en: "Why is love such an important Christian quality personally meaningful to you?", tl: "Ano ang gusto mong maalala tungkol sa konsensiya mo sa hinaharap?" } },
+  100: { category: { en: "PERSONAL FAITH", tl: "PERSONAL NA PANANAMPALATAYA" }, question: { en: "How does this personally affect your faith and your life?", tl: "Ano ang gusto mong maalala tungkol sa halimbawa mo sa iba sa hinaharap?" } },
 };
 const TOTAL_QUESTIONS = 100;
 
@@ -124,18 +124,7 @@ const TOTAL_QUESTIONS = 100;
 /* Subtle per-category accent used only for the popup badge/border.
    The user's selected 5-color theme remains the primary visual system;
    these are blended in lightly, not full theme overrides. */
-const CATEGORY_ACCENTS = {
-  "PERSONAL FAITH":  "#8a6fd6",
-  "COUPLES":         "#e0788f",
-  "FAMILY":          "#e0956a",
-  "CONGREGATION":    "#4caf82",
-  "MINISTRY":        "#4a90c9",
-  "YOUNG ONES":      "#5fc7a3",
-  "BIBLE":           "#cda352",
-  "CHRISTIAN LIFE":  "#3fb6b0",
-  "CHALLENGES":      "#a3563f",
-  "FUTURE & HOPE":   "#e0b93f"
-};
+const CATEGORY_ACCENTS={"PERSONAL FAITH":"#8a6fd6","PRAYER":"#6c8ed4","BIBLE":"#cda352","CHALLENGES":"#a3563f","CONGREGATION":"#4caf82","MINISTRY":"#4a90c9","CHRISTIAN LIFE":"#3fb6b0","FAMILY":"#e0956a","FUTURE & HOPE":"#e0b93f","COUPLES":"#e0788f","YOUNG ONES":"#5fc7a3"};
 
 /* ---------- 3. STATE & LOCALSTORAGE ---------- */
 const STORAGE_KEY = "faithTalkRouletteState";
@@ -147,6 +136,7 @@ const state = {
   theme: "royal",
   mode: "dark",
   sound: true,
+  language: "tl",
   isSpinning: false
 };
 
@@ -167,7 +157,8 @@ function saveState() {
       rotation: state.rotation,
       theme: state.theme,
       mode: state.mode,
-      sound: state.sound
+      sound: state.sound,
+      language: state.language
     }));
   } catch (e) {
     /* localStorage may be unavailable (private mode); fail silently */
@@ -194,6 +185,7 @@ function loadState() {
     state.theme = saved.theme || "royal";
     state.mode = saved.mode || "dark";
     state.sound = typeof saved.sound === "boolean" ? saved.sound : true;
+    state.language = saved.language === "en" ? "en" : "tl";
   } else {
     state.pool = shuffledNumbers();
     state.used = [];
@@ -207,6 +199,10 @@ function startNewGame() {
   state.rotation = 0;
   saveState();
 }
+
+const UI={en:{title:"FAITH TALK",subtitle:"100 QUESTIONS · RANDOMIZED · NO REPEATS",spin:"SPIN",remaining:"REMAINING",used:"USED",close:"CLOSE",completed:"ALL 100 QUESTIONS COMPLETED",completedTitle:"YOU HAVE COMPLETED<br>FAITH TALK",resetGame:"RESET GAME",resetQuestion:"Reset the game?",resetBody:"All 100 questions will be shuffled and made available again. This clears your current progress.",cancel:"CANCEL",reset:"RESET",language:"LANGUAGE",fullReset:"FULL RESET",fullResetTitle:"RESET EVERYTHING?",fullResetBody:"This will remove all game progress and restore the default settings.",fullResetOk:"RESET EVERYTHING"},tl:{title:"FAITH TALK",subtitle:"100 TANONG · RANDOM · WALANG ULIT",spin:"PAIKUTIN",remaining:"NATITIRA",used:"GINAMIT",close:"ISARA",completed:"NAUBOS NA ANG 100 TANONG",completedTitle:"NAKUMPLETO MO NA ANG<br>FAITH TALK",resetGame:"I-RESET ANG LARO",resetQuestion:"I-reset ang laro?",resetBody:"Ire-reshuffle ang lahat ng 100 tanong at ibabalik ang mga ito. Buburahin nito ang kasalukuyang progreso.",cancel:"KANSELAHIN",reset:"I-RESET",language:"WIKA",fullReset:"FULL RESET",fullResetTitle:"I-RESET LAHAT?",fullResetBody:"Buburahin nito ang lahat ng progreso at ibabalik sa default ang mga setting.",fullResetOk:"I-RESET LAHAT"}};
+function tr(k){return UI[state.language][k];}
+function applyLanguage(language){state.language=language==="en"?"en":"tl";document.documentElement.lang=state.language;const u=UI[state.language];document.querySelector(".title").textContent=u.title;document.querySelector(".subtitle").textContent=u.subtitle;document.querySelector(".spin-btn-label").textContent=u.spin;document.querySelector(".history-label").textContent=u.used;document.getElementById("language-label").textContent=u.language;document.getElementById("full-reset-btn").textContent=u.fullReset;document.getElementById("modal-close-btn").textContent=u.close;document.getElementById("reset-btn").textContent=u.resetGame;document.getElementById("confirm-title").textContent=u.resetQuestion;document.getElementById("confirm-body").textContent=u.resetBody;document.getElementById("confirm-cancel").textContent=u.cancel;document.getElementById("confirm-ok").textContent=u.reset;document.querySelector(".complete-eyebrow").textContent=u.completed;document.getElementById("complete-title").innerHTML=u.completedTitle;document.getElementById("full-confirm-title").textContent=u.fullResetTitle;document.getElementById("full-confirm-body").textContent=u.fullResetBody;document.getElementById("full-confirm-cancel").textContent=u.cancel;document.getElementById("full-confirm-ok").textContent=u.fullResetOk;document.getElementById("language-select").value=state.language;updateRemainingUI();saveState();}
 
 /* ---------- 4. THEME / MODE / SOUND TOGGLES ---------- */
 const bodyEl = document.body;
@@ -242,9 +238,8 @@ function initThemeControls() {
     applyMode(state.mode === "dark" ? "light" : "dark");
   });
 
-  document.getElementById("sound-toggle").addEventListener("click", () => {
-    applySound(!state.sound);
-  });
+  document.getElementById("sound-toggle").addEventListener("click", () => { applySound(!state.sound); });
+  document.getElementById("language-select").addEventListener("change",e=>applyLanguage(e.target.value));
 }
 
 /* ---------- 5. WHEEL CONSTRUCTION ---------- */
@@ -466,19 +461,7 @@ const modalCard = document.getElementById("modal-card");
 const completeBackdrop = document.getElementById("complete-backdrop");
 const confirmBackdrop = document.getElementById("confirm-backdrop");
 
-function openQuestionModal(number) {
-  const data = QUESTIONS[number];
-  const accent = CATEGORY_ACCENTS[data.category] || "var(--accent)";
-
-  document.getElementById("modal-category").textContent = data.category;
-  document.getElementById("modal-question-number").textContent = `QUESTION ${number}`;
-  document.getElementById("modal-question-text").textContent = data.question;
-  modalCard.style.setProperty("--cat-accent", accent);
-
-  modalBackdrop.hidden = false;
-  window.requestAnimationFrame(() => modalCard.focus());
-  document.addEventListener("keydown", handleEscapeKey);
-}
+function openQuestionModal(number){const data=QUESTIONS[number];const accent=CATEGORY_ACCENTS[data.category.en]||"var(--accent)";document.getElementById("modal-category").textContent=data.category[state.language];document.getElementById("modal-question-number").textContent=`${state.language==="tl"?"TANONG":"QUESTION"} ${number}`;document.getElementById("modal-question-text").textContent=data.question[state.language];modalCard.style.setProperty("--cat-accent",accent);modalBackdrop.hidden=false;window.requestAnimationFrame(()=>modalCard.focus());document.addEventListener("keydown",handleEscapeKey);}
 
 function closeQuestionModal() {
   modalBackdrop.hidden = true;
@@ -522,6 +505,9 @@ function performReset() {
   spinBtn.classList.remove("is-spinning");
 }
 
+
+const fullConfirmBackdrop=document.getElementById("full-confirm-backdrop");function openFullResetModal(){fullConfirmBackdrop.hidden=false;}function closeFullResetModal(){fullConfirmBackdrop.hidden=true;}function performFullReset(){try{localStorage.removeItem(STORAGE_KEY);}catch(e){}state.pool=shuffledNumbers();state.used=[];state.rotation=0;state.theme="royal";state.mode="dark";state.sound=true;state.language="tl";applyTheme("royal");applyMode("dark");applySound(true);applyLanguage("tl");refreshWheelUsedState();updateRemainingUI();updateHistoryUI();document.getElementById("wheel-hub-number").textContent="?";setWheelRotation(0,false);closeFullResetModal();closeConfirmModal();completeBackdrop.hidden=true;const b=document.getElementById("spin-btn");b.disabled=false;b.classList.remove("is-spinning");}
+
 function initModalControls() {
   document.getElementById("modal-close").addEventListener("click", closeQuestionModal);
   document.getElementById("modal-close-btn").addEventListener("click", closeQuestionModal);
@@ -532,6 +518,7 @@ function initModalControls() {
   document.getElementById("reset-btn").addEventListener("click", openConfirmModal);
   document.getElementById("confirm-cancel").addEventListener("click", closeConfirmModal);
   document.getElementById("confirm-ok").addEventListener("click", performReset);
+  document.getElementById("full-reset-btn").addEventListener("click",openFullResetModal);document.getElementById("full-confirm-cancel").addEventListener("click",closeFullResetModal);document.getElementById("full-confirm-ok").addEventListener("click",performFullReset);fullConfirmBackdrop.addEventListener("click",e=>{if(e.target===fullConfirmBackdrop)closeFullResetModal();});
   confirmBackdrop.addEventListener("click", (e) => {
     if (e.target === confirmBackdrop) closeConfirmModal();
   });
@@ -541,7 +528,7 @@ function initModalControls() {
 function updateRemainingUI() {
   const remaining = state.pool.length;
   document.getElementById("remaining-text").innerHTML =
-    `REMAINING: <strong>${remaining} / ${TOTAL_QUESTIONS}</strong>`;
+    `${tr("remaining")}: <strong>${remaining} / ${TOTAL_QUESTIONS}</strong>`;
 }
 
 function updateHistoryUI() {
@@ -566,6 +553,7 @@ function init() {
   applyTheme(state.theme);
   applyMode(state.mode);
   applySound(state.sound);
+  applyLanguage(state.language);
 
   buildWheel();
   refreshWheelUsedState();
