@@ -558,3 +558,5 @@ body[data-mode="dark"] .icon-moon { display: block; }
   .modal-backdrop, .modal-card { animation: none !important; }
   .icon-btn, .spin-btn, .modal-btn, .theme-swatch { transition: none !important; }
 }
+
+.language-control{display:inline-flex;align-items:center;gap:7px;padding:7px 9px;border:1px solid var(--card-border);border-radius:999px;background:var(--card);color:var(--text-muted);font-size:9px;font-weight:800;letter-spacing:.12em}.language-control select{appearance:none;border:0;outline:0;background:transparent;color:var(--text);font:inherit;letter-spacing:.04em;cursor:pointer}.language-control option{color:#111;background:#fff}.full-reset-btn{padding:8px 11px;border:1px solid var(--card-border);border-radius:999px;background:transparent;color:var(--text-muted);font-size:9px;font-weight:800;letter-spacing:.12em;transition:.2s ease}.full-reset-btn:hover{color:var(--text);border-color:var(--accent)}@media(max-width:700px){.language-control span{display:none}.language-control{padding:7px 8px}.full-reset-btn{font-size:8px;padding:8px 9px}}
