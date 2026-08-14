@@ -172,6 +172,7 @@ const UI_STRINGS = {
     footer: "Spin, reflect, and talk it through together.",
     modeToggle: "Toggle light and dark mode",
     soundToggle: "Toggle sound",
+    resetIcon: "Restart game",
     closeQuestion: "Close question"
   },
   tl: {
@@ -191,6 +192,7 @@ const UI_STRINGS = {
     footer: "Umikot, magnilay, at pag-usapan ito nang sama-sama.",
     modeToggle: "Palitan ang light at dark mode",
     soundToggle: "Palitan ang tunog",
+    resetIcon: "I-restart ang laro",
     closeQuestion: "Isara ang tanong"
   }
 };
@@ -345,6 +347,7 @@ function renderStaticUI() {
 
   document.getElementById("mode-toggle").setAttribute("aria-label", strings.modeToggle);
   document.getElementById("sound-toggle").setAttribute("aria-label", strings.soundToggle);
+  document.getElementById("reset-icon-btn").setAttribute("aria-label", strings.resetIcon);
   document.getElementById("modal-close").setAttribute("aria-label", strings.closeQuestion);
 }
 
@@ -684,6 +687,10 @@ function initModalControls() {
   });
 
   document.getElementById("reset-btn").addEventListener("click", openConfirmModal);
+  document.getElementById("reset-icon-btn").addEventListener("click", () => {
+    if (!modalBackdrop.hidden) closeQuestionModal();
+    openConfirmModal();
+  });
   document.getElementById("confirm-cancel").addEventListener("click", closeConfirmModal);
   document.getElementById("confirm-ok").addEventListener("click", performReset);
   confirmBackdrop.addEventListener("click", (e) => {
