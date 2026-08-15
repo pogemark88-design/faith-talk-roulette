@@ -791,3 +791,17 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
+/* ---------- 12. OFFLINE SUPPORT (service worker) ---------- */
+// Progressive enhancement: registration is wrapped so a failure (unsupported
+// browser, running from file://, etc.) never blocks the game itself.
+function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) return;
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch(() => {
+      /* offline support is optional — fail silently */
+    });
+  });
+}
+
+registerServiceWorker();
