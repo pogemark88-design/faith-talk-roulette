@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/31099645/README.md)
+[Uploading README.md…]()
 # Faith Talk Roulette
 
 A clean, modern roulette wheel for Faith Talk conversation nights. Spin the wheel, land on a number 1–100, and a themed popup reveals that number's category and question. Every number is removed from the pool once used, so a game never repeats a question.
