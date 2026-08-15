@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/31099533/README.md)
+[README.md](https://github.com/user-attachments/files/31099645/README.md)
 # Faith Talk Roulette
 
 A clean, modern roulette wheel for Faith Talk conversation nights. Spin the wheel, land on a number 1–100, and a themed popup reveals that number's category and question. Every number is removed from the pool once used, so a game never repeats a question.
@@ -11,14 +11,18 @@ The 100 questions are personal and reflective ("Faith Talk Personal") rather tha
 
 ```
 faith-talk-roulette/
-├── index.html      Page structure — wheel, controls, and all three modals
-├── style.css       All styling: 5 color themes, light/dark mode, wheel, popup, responsive rules
-├── script.js       Game logic: the 100 questions, wheel geometry, spin animation, sound, storage
-├── logo.png        Transparent logo (speech bubble + heart), used as the top-bar brand mark via CSS mask
-├── favicon-32.png  Browser tab icon
-├── favicon-180.png Apple touch icon (home screen bookmark)
-├── favicon-512.png Larger icon for PWA/manifest use
-└── README.md       This file
+├── index.html            Page structure — wheel, controls, and all three modals
+├── style.css             All styling: 5 color themes, light/dark mode, wheel, popup, responsive rules
+├── script.js             Game logic: questions, wheel geometry, spin animation, sound, storage, SW registration
+├── manifest.json         Web app manifest — makes the site installable
+├── sw.js                 Service worker — caches the app shell for offline use
+├── logo.png              Transparent logo (speech bubble + heart), used as the top-bar brand mark via CSS mask
+├── favicon-32.png        Browser tab icon
+├── favicon-192.png       Standard app icon (Android home screen, manifest)
+├── favicon-180.png       Apple touch icon (iOS home screen)
+├── favicon-512.png       Larger standard app icon (manifest, splash screens)
+├── icon-maskable-512.png Android adaptive icon (extra padding so it survives circular/squircle masking)
+└── README.md             This file
 ```
 
 ## How it works
@@ -53,6 +57,16 @@ Category ids map to their bilingual labels in `CATEGORIES`, and to their popup a
 ## Language
 
 Tagalog is the default language. A "TL / EN" switcher sits in the top bar, and a matching one sits inside the question popup itself; both stay in sync and the choice is saved to `localStorage` and persists across visits. Switching languages only changes the displayed text — it never resets progress, the wheel, the theme, or the used-question history. All static interface text (buttons, labels, modal copy) lives in the `UI_STRINGS` object in `script.js`.
+
+## Install / offline use
+
+The site is a installable PWA (Progressive Web App):
+
+- **Android (Chrome):** visiting the site shows an "Install app" prompt, or use the browser menu → **Add to Home screen / Install app**. It opens full-screen with no browser bar, like a native app.
+- **iPhone/iPad (Safari):** tap the Share icon → **Add to Home Screen**. iOS doesn't show an automatic install prompt, but the result is the same — a home-screen icon that opens full-screen.
+- **Offline:** a service worker (`sw.js`) caches the app shell (HTML, CSS, JS, icons) the first time it's opened with a connection. After that, it keeps working with no signal — this fits the actual use case (a hall, a home visit, weak wifi) since the game only ever needed `localStorage`, never a live connection.
+- **Updates:** when you push new files (new questions, fixes, etc.) and the user has a connection, the service worker fetches the fresh version in the background and serves it on the next load. If they're fully offline, they keep using whatever was last cached until they're back online.
+- If you ever change any cached file and want to force everyone's cache to refresh immediately rather than update in the background, bump `CACHE_VERSION` at the top of `sw.js` — that alone invalidates the old cache.
 
 ## Customizing themes
 
