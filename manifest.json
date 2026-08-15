@@ -1,0 +1,17 @@
+{
+  "name": "Faith Talk Roulette",
+  "short_name": "Faith Talk",
+  "description": "100 personal na tanong para sa makabuluhang pag-uusap — Tagalog at English.",
+  "lang": "tl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0c0e14",
+  "theme_color": "#0b1e46",
+  "icons": [
+    { "src": "favicon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
