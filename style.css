@@ -33,6 +33,10 @@ button {
   border: none;
   background: none;
   color: inherit;
+  /* removes the ~300ms tap delay / double-tap-zoom, and the grey tap flash
+     Android/iOS show by default — without this every tap reads as "web page" */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 button:focus-visible,
 a:focus-visible {
@@ -425,7 +429,7 @@ body[data-mode="dark"] .icon-moon { display: block; }
 
 .page-footer {
   text-align: center;
-  padding: 26px 20px 40px;
+  padding: 26px 20px max(40px, env(safe-area-inset-bottom));
   color: var(--text-muted);
   font-size: 12px;
   letter-spacing: 0.04em;
@@ -440,7 +444,8 @@ body[data-mode="dark"] .icon-moon { display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: max(20px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right))
+           max(20px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
   z-index: 100;
   animation: backdropIn .25s ease;
 }
@@ -590,28 +595,92 @@ body[data-mode="dark"] .icon-moon { display: block; }
 .confirm-actions .modal-btn { padding: 13px 28px; }
 
 /* ---------- 10. RESPONSIVE ---------- */
+/* Mobile rule of thumb used throughout this section: touch targets never
+   shrink below ~40–44px just because the viewport is narrow — only the
+   GAPS between things tighten. Cramming smaller targets into one row is
+   the "desktop shrunk down" trap; reflowing the layout is the fix. */
 @media (max-width: 560px) {
-  .topbar { padding: 16px 14px; }
-  .theme-picker { gap: 5px; padding: 5px; }
-  .theme-swatch { width: 16px; height: 16px; }
-  .lang-btn { padding: 5px 9px; font-size: 10px; }
-  .brand-text { font-size: 13px; }
-  .brand-mark { width: 22px; height: 22px; }
-  .wheel-wrap { width: 82vw; }
-  .spin-btn { padding: 16px 48px; font-size: 15.5px; width: min(280px, 78vw); }
-  .history-list { max-width: 60vw; }
+  /* The top bar becomes its own two-row stack: brand centered on top,
+     controls centered in a wrapping row below — instead of one row
+     fighting for space. It also goes sticky with a soft blur so the
+     language/theme/sound controls stay reachable without scrolling back
+     up, which reads as "app chrome" rather than "page header". */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 12px;
+    padding: max(14px, env(safe-area-inset-top)) 16px 14px;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--card-border);
+  }
+  .brand { width: 100%; justify-content: center; }
+  .brand-text { font-size: 13.5px; }
+  .brand-mark { width: 23px; height: 23px; }
+
+  .topbar-controls {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+
+  /* Touch targets grow here, they don't shrink. */
+  .icon-btn { width: 44px; height: 44px; }
+  .icon-btn .icon { width: 19px; height: 19px; }
+
+  .lang-picker { padding: 5px; gap: 3px; }
+  .lang-btn { padding: 10px 16px; font-size: 12px; min-height: 40px; }
+
+  .theme-picker { gap: 9px; padding: 7px; }
+  .theme-swatch { width: 24px; height: 24px; }
+  .theme-swatch[aria-pressed="true"] { transform: scale(1.12); }
+
+  /* Wheel: give it noticeably more of the viewport. A bigger rendered
+     circle is the only real lever CSS has over legibility of 100 tiny
+     segment numbers — it can't work miracles, but it helps a lot. */
+  .wheel-wrap { width: min(88vw, 380px); }
+
+  .spin-btn {
+    padding: 19px 44px;
+    font-size: 15.5px;
+    letter-spacing: 0.11em;
+    width: min(300px, 84vw);
+  }
+
+  .history { padding: 11px 16px; }
+  .history-chip { padding: 6px 11px; font-size: 12.5px; min-height: 30px; }
+  .history-list { max-width: 62vw; }
+
+  /* Popup buttons get real tap room too. */
+  .modal-close { width: 40px; height: 40px; }
+  .modal-lang-picker { padding: 4px; }
+  .modal-lang-picker .lang-btn { padding: 8px 13px; font-size: 10.5px; min-height: 36px; }
+  .modal-card { padding-top: clamp(34px, 9vw, 46px); }
 }
 
 @media (max-width: 380px) {
-  .topbar-controls { gap: 6px; }
-  .lang-btn { padding: 4px 7px; }
+  /* Very narrow phones: tighten gaps further, but hold the line on
+     target size — the row already wraps, so there's no need to shrink
+     anything to fit. */
+  .topbar-controls { column-gap: 8px; row-gap: 8px; }
+  .theme-picker { gap: 7px; }
+  .spin-btn { letter-spacing: 0.09em; padding: 18px 36px; }
 }
 
-/* landscape phones: shrink vertical rhythm */
+/* landscape phones: shrink vertical rhythm, keep the topbar from eating
+   the limited height */
 @media (max-height: 620px) and (orientation: landscape) {
+  .topbar { position: static; padding: 10px 16px; }
   .stage { padding-top: 4px; }
   .stage-heading { margin-bottom: 8px; }
-  .wheel-wrap { width: 40vh; }
+  .wheel-wrap { width: min(46vh, 320px); }
   .controls { margin-top: 10px; gap: 8px; }
 }
 
