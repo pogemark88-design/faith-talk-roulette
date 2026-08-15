@@ -19,105 +19,105 @@
    This is the single source of truth for wheel + popup content. */
 const QUESTIONS = {
   1: { cat: "PERSONAL_FAITH", question: { en: "What is something about Jehovah that you personally appreciate the most?", tl: "Ano ang isang bagay tungkol kay Jehova na talagang pinahahalagahan mo?" } },
-  2: { cat: "PERSONAL_FAITH", question: { en: "When do you personally feel closest to Jehovah?", tl: "Kailan mo pinakanararamdaman na malapit ka kay Jehova?" } },
-  3: { cat: "PERSONAL_FAITH", question: { en: "What has strengthened your faith the most in your own life?", tl: "Ano ang pinakamalaking nakapagpatibay ng pananampalataya mo sa buhay mo?" } },
-  4: { cat: "PERSONAL_FAITH", question: { en: "How would you describe your relationship with Jehovah right now?", tl: "Paano mo ilalarawan ang relasyon mo kay Jehova sa ngayon?" } },
-  5: { cat: "PERSONAL_FAITH", question: { en: "Have you ever had a moment when you felt Jehovah was especially close to you? What happened?", tl: "Nagkaroon ka na ba ng sandali na naramdaman mong lalo kang kalapit ni Jehova? Ano ang nangyari?" } },
-  6: { cat: "PERSONAL_FAITH", question: { en: "What is one thing you want to understand better about Jehovah?", tl: "Ano ang isang bagay na gusto mong mas maunawaan pa tungkol kay Jehova?" } },
-  7: { cat: "PERSONAL_FAITH", question: { en: "Who or what first helped you believe that Jehovah is real and personal?", tl: "Sino o ano ang unang tumulong sa iyo para maniwalang totoo at personal si Jehova?" } },
-  8: { cat: "PERSONAL_FAITH", question: { en: "What would you say to someone who doubts that Jehovah cares about them personally?", tl: "Ano ang sasabihin mo sa isang nagdududa na personal siyang pinapahalagahan ni Jehova?" } },
-  9: { cat: "PERSONAL_FAITH", question: { en: "In what way has your view of Jehovah changed over the years?", tl: "Sa anong paraan nagbago ang pananaw mo kay Jehova sa paglipas ng mga taon?" } },
-  10: { cat: "PERSONAL_FAITH", question: { en: "Can you remember a decision you made because of your faith that you're glad you made?", tl: "Naaalala mo ba ang isang desisyon na ginawa mo dahil sa pananampalataya mo na ikinatutuwa mo hanggang ngayon?" } },
-  11: { cat: "PRAYER", question: { en: "How has prayer personally helped you when you were going through something difficult?", tl: "Paano ka personal na natulungan ng panalangin noong dumaraan ka sa mahirap na sitwasyon?" } },
-  12: { cat: "PRAYER", question: { en: "What helps you keep praying even when you don't see an answer right away?", tl: "Ano ang nakakatulong sa iyo para patuloy na manalangin kahit hindi mo agad nakikita ang sagot?" } },
-  13: { cat: "PRAYER", question: { en: "When was the last time you felt Jehovah really answered your prayer?", tl: "Kailan ang huling pagkakataon na naramdaman mong talagang sinagot ni Jehova ang panalangin mo?" } },
-  14: { cat: "PRAYER", question: { en: "What do you usually talk to Jehovah about in your personal prayers?", tl: "Ano ang karaniwan mong pinag-uusapan kay Jehova sa personal mong panalangin?" } },
-  15: { cat: "PRAYER", question: { en: "Have you ever prayed about something you were scared to say out loud? What was it like?", tl: "Nanalangin ka na ba tungkol sa isang bagay na natatakot kang sabihin nang malakas? Kumusta ang naramdaman mo?" } },
-  16: { cat: "PRAYER", question: { en: "How would you describe the difference between just saying prayers and really praying?", tl: "Paano mo ilalarawan ang pagkakaiba ng basta-bastang pagdarasal at ng totoong pananalangin?" } },
-  17: { cat: "PRAYER", question: { en: "What is one habit that has made your prayers feel more personal?", tl: "Ano ang isang gawi na nakatulong para mas maging personal ang mga panalangin mo?" } },
-  18: { cat: "PRAYER", question: { en: "Is there a place or time when you find it easiest to pray sincerely?", tl: "May lugar o oras ba na pinakamadali mong manalangin nang taos-puso?" } },
-  19: { cat: "PRAYER", question: { en: "What would you want to remember to be more thankful for in prayer?", tl: "Ano ang gusto mong laging tandaan na ipagpasalamat sa panalangin?" } },
-  20: { cat: "BIBLE", question: { en: "Is there a scripture that has really affected you? Why?", tl: "May isang teksto ba sa Bibliya na talagang nakaapekto sa iyo? Bakit?" } },
-  21: { cat: "BIBLE", question: { en: "How did something you learned in the Bible recently affect you?", tl: "Paano ka naapektuhan ng isang natutuhan mo sa Bibliya kamakailan?" } },
-  22: { cat: "BIBLE", question: { en: "Which Bible character do you relate to the most, and why?", tl: "Sinong tauhan sa Bibliya ang pinakanararamdaman mong kahalintulad, at bakit?" } },
-  23: { cat: "BIBLE", question: { en: "What is your favorite part of your personal Bible reading?", tl: "Ano ang pinakagusto mo sa personal na pagbabasa mo ng Bibliya?" } },
-  24: { cat: "BIBLE", question: { en: "Can you remember a Bible account that changed how you think about something?", tl: "Naaalala mo ba ang isang kuwento sa Bibliya na nagbago ng pananaw mo sa isang bagay?" } },
-  25: { cat: "BIBLE", question: { en: "What makes it hard for you to stay consistent with reading the Bible?", tl: "Ano ang pinakamahirap para sa iyo pagdating sa pagiging consistent sa pagbabasa ng Bibliya?" } },
-  26: { cat: "BIBLE", question: { en: "Have you ever read a verse that felt like it was written just for you?", tl: "Nakabasa ka na ba ng talata na parang para sa iyo talaga ito isinulat?" } },
-  27: { cat: "BIBLE", question: { en: "What is one Bible principle you try hard to apply in your daily life?", tl: "Ano ang isang simulain sa Bibliya na talagang sinisikap mong ikapit sa araw-araw mong buhay?" } },
-  28: { cat: "BIBLE", question: { en: "Who taught you to love reading the Bible, and how did they do it?", tl: "Sino ang nagturo sa iyo na mahalin ang pagbabasa ng Bibliya, at paano nila ito ginawa?" } },
-  29: { cat: "GRATITUDE", question: { en: "What is something you personally feel most grateful to Jehovah for right now?", tl: "Ano ang isang bagay na talagang pinasasalamatan mo kay Jehova sa ngayon?" } },
-  30: { cat: "GRATITUDE", question: { en: "What is a small blessing in your life that you don't want to take for granted?", tl: "Ano ang isang maliit na pagpapala sa buhay mo na ayaw mong basta na lang balewalain?" } },
-  31: { cat: "GRATITUDE", question: { en: "Who is someone you're grateful Jehovah placed in your life?", tl: "Sino ang isang taong ikinagagalak mong ipinadala ni Jehova sa buhay mo?" } },
-  32: { cat: "GRATITUDE", question: { en: "What experience are you most thankful for because of how it shaped you?", tl: "Anong karanasan ang pinakapinasasalamatan mo dahil sa paraan ng pagbuo nito sa iyo?" } },
-  33: { cat: "GRATITUDE", question: { en: "Have you ever realized a blessing only after it was gone or almost lost?", tl: "Napansin mo na ba ang isang pagpapala noong halos mawala na ito o nawala na?" } },
-  34: { cat: "GRATITUDE", question: { en: "What is one thing about your spiritual life you're thankful for that others might overlook?", tl: "Ano ang isang bagay tungkol sa espirituwal mong buhay na pinasasalamatan mo pero baka hindi napapansin ng iba?" } },
-  35: { cat: "GRATITUDE", question: { en: "When do you find it easiest to notice Jehovah's kindness in your day?", tl: "Kailan mo pinakamadaling mapansin ang kabaitan ni Jehova sa araw mo?" } },
-  36: { cat: "GRATITUDE", question: { en: "What would you tell your younger self to be more grateful for?", tl: "Ano ang sasabihin mo sa mas batang ikaw para mas magpasalamat pa?" } },
-  37: { cat: "GRATITUDE", question: { en: "Is there a hard season in your life that you're now grateful you went through?", tl: "May mahirap na panahon ba sa buhay mo na ikinatutuwa mo na ngayon na naranasan mo?" } },
-  38: { cat: "CHALLENGES", question: { en: "What do you personally do when you feel discouraged spiritually?", tl: "Ano ang ginagawa mo kapag nararamdaman mong nanghihina ang espirituwalidad mo?" } },
-  39: { cat: "CHALLENGES", question: { en: "What helps you continue serving Jehovah when you feel discouraged?", tl: "Ano ang nakakatulong sa iyo para patuloy na maglingkod kay Jehova kapag pinanghihinaan ka ng loob?" } },
-  40: { cat: "CHALLENGES", question: { en: "What is the hardest temptation you've had to work through, in a way you're comfortable sharing?", tl: "Ano ang pinakamahirap na tukso na kinaharap mo, sa paraang komportable kang ibahagi?" } },
-  41: { cat: "CHALLENGES", question: { en: "Have you ever felt like giving up spiritually? What kept you going?", tl: "Naramdaman mo na ba na gusto mo nang sumuko sa espirituwal? Ano ang nagpapatuloy sa iyo?" } },
-  42: { cat: "CHALLENGES", question: { en: "How do you personally deal with pressure to compromise your beliefs?", tl: "Paano mo hinaharap ang presyon na sumuway sa mga paniniwala mo?" } },
-  43: { cat: "CHALLENGES", question: { en: "What is one thing you've learned from a mistake that helped your spirituality?", tl: "Ano ang isang natutuhan mo mula sa isang pagkakamali na nakatulong sa espirituwalidad mo?" } },
-  44: { cat: "CHALLENGES", question: { en: "When life feels overwhelming, what is the first thing you turn to?", tl: "Kapag nararamdaman mong sobrang bigat ng buhay, ano ang una mong ginagawa?" } },
-  45: { cat: "CHALLENGES", question: { en: "How do you keep a positive outlook when things aren't going your way?", tl: "Paano mo pinapanatili ang positibong pananaw kahit hindi maganda ang takbo ng buhay?" } },
-  46: { cat: "CHALLENGES", question: { en: "What would you tell someone who feels like their struggles are too big for Jehovah to help with?", tl: "Ano ang sasabihin mo sa isang nakaramdam na masyadong malaki ang problema niya para matulungan pa siya ni Jehova?" } },
-  47: { cat: "FAMILY", question: { en: "How has your family influenced your relationship with Jehovah?", tl: "Paano naapektuhan ng pamilya mo ang relasyon mo kay Jehova?" } },
-  48: { cat: "FAMILY", question: { en: "Who in your family has had the biggest spiritual influence on you?", tl: "Sino sa pamilya mo ang may pinakamalaking espirituwal na impluwensiya sa iyo?" } },
-  49: { cat: "FAMILY", question: { en: "What is a family tradition or habit that has strengthened your faith?", tl: "Ano ang isang tradisyon o gawi ng pamilya na nakapagpatibay ng pananampalataya mo?" } },
-  50: { cat: "FAMILY", question: { en: "How do you personally show appreciation to the people in your family?", tl: "Paano mo ipinapakita ang pagpapahalaga mo sa mga miyembro ng pamilya mo?" } },
-  51: { cat: "FAMILY", question: { en: "What is one thing you hope to pass on to your family spiritually?", tl: "Ano ang isang bagay na gusto mong maipasa sa pamilya mo sa espirituwal?" } },
-  52: { cat: "FAMILY", question: { en: "Have you ever learned an important lesson about faith from a family member?", tl: "Natuto ka na ba ng mahalagang aral tungkol sa pananampalataya mula sa isang kapamilya?" } },
-  53: { cat: "FAMILY", question: { en: "What would you like to improve about how you communicate with your family?", tl: "Ano ang gusto mong pagbutihin sa paraan ng iyong pakikipag-usap sa pamilya mo?" } },
-  54: { cat: "FAMILY", question: { en: "Who in your family do you most want to grow closer to spiritually?", tl: "Sino sa pamilya mo ang pinakagusto mong maging mas malapit sa espirituwal?" } },
-  55: { cat: "FAMILY", question: { en: "What is a memory with your family that reminds you of Jehovah's love?", tl: "Anong alaala kasama ang pamilya mo ang nagpapaalala sa iyo ng pag-ibig ni Jehova?" } },
-  56: { cat: "FRIENDSHIPS", question: { en: "Have your friendships ever influenced your relationship with Jehovah? In what way?", tl: "Naimpluwensyahan ka na ba ng mga kaibigan mo sa relasyon mo kay Jehova? Sa anong paraan?" } },
-  57: { cat: "FRIENDSHIPS", question: { en: "What qualities do you look for most in a close friend?", tl: "Anong katangian ang pinakahinahanap mo sa isang malapit na kaibigan?" } },
-  58: { cat: "FRIENDSHIPS", question: { en: "Who is a friend that has encouraged your faith, and how did they do it?", tl: "Sino ang kaibigan na nagpalakas ng loob mo sa pananampalataya, at paano nila ito ginawa?" } },
-  59: { cat: "FRIENDSHIPS", question: { en: "Have you ever had to let go of a friendship because it wasn't good for you spiritually?", tl: "Kinailangan mo na bang lumayo sa isang kaibigan dahil hindi ito maganda para sa espirituwalidad mo?" } },
-  60: { cat: "FRIENDSHIPS", question: { en: "What kind of friend do you personally try to be to others?", tl: "Anong klaseng kaibigan ang sinisikap mong maging para sa iba?" } },
-  61: { cat: "FRIENDSHIPS", question: { en: "When was a time a friend really helped you through something difficult?", tl: "Kailan ka huling tinulungan ng isang kaibigan sa isang mahirap na sandali?" } },
-  62: { cat: "FRIENDSHIPS", question: { en: "What would you want a friend to know about how you're really doing right now?", tl: "Ano ang gusto mong malaman ng isang kaibigan tungkol sa totoong kalagayan mo ngayon?" } },
-  63: { cat: "FRIENDSHIPS", question: { en: "How do you personally try to encourage a friend who seems discouraged?", tl: "Paano mo sinisikap na palakasin ang loob ng isang kaibigang mukhang panghina?" } },
-  64: { cat: "CONGREGATION", question: { en: "What is one experience at a congregation meeting that has stayed with you?", tl: "Ano ang isang karanasan sa pulong ng kongregasyon na hindi mo nakakalimutan?" } },
-  65: { cat: "CONGREGATION", question: { en: "Who in your congregation has personally encouraged you the most?", tl: "Sino sa kongregasyon ninyo ang pinaka-nagpalakas ng loob mo?" } },
-  66: { cat: "CONGREGATION", question: { en: "What do you personally look forward to most about meetings?", tl: "Ano ang talagang inaasam mo pagdating sa mga pulong?" } },
-  67: { cat: "CONGREGATION", question: { en: "Have you ever felt encouraged by simply watching how others handle a difficult time?", tl: "Naramdaman mo na ba na napalakas ang loob mo dahil lang sa pagmamasid kung paano hinarap ng iba ang isang mahirap na panahon?" } },
-  68: { cat: "CONGREGATION", question: { en: "What is one way you personally try to make others feel welcome at the congregation?", tl: "Ano ang isang paraan na sinisikap mong gawin para maramdaman ng iba na malugod silang tinatanggap sa kongregasyon?" } },
-  69: { cat: "CONGREGATION", question: { en: "Who is someone in your congregation you'd like to know better?", tl: "Sino sa kongregasyon ninyo ang gusto mong makilala nang mas mabuti?" } },
-  70: { cat: "CONGREGATION", question: { en: "What is a comment or lesson from a meeting that has stuck with you?", tl: "Ano ang isang komento o aral mula sa pulong na hindi mo nakakalimutan?" } },
-  71: { cat: "CONGREGATION", question: { en: "How has being part of a congregation shaped who you are today?", tl: "Paano ka hinubog ng pagiging bahagi ng kongregasyon sa kung sino ka ngayon?" } },
-  72: { cat: "CONGREGATION", question: { en: "What would you like to do to become more active in your congregation?", tl: "Ano ang gusto mong gawin para maging mas aktibo sa kongregasyon?" } },
-  73: { cat: "MINISTRY", question: { en: "What is an experience from the ministry that meant a lot to you personally?", tl: "Ano ang isang karanasan sa ministeryo na talagang may kahulugan para sa iyo?" } },
-  74: { cat: "MINISTRY", question: { en: "How do you personally feel before you go out in the ministry?", tl: "Ano ang nararamdaman mo bago ka lumabas sa ministeryo?" } },
-  75: { cat: "MINISTRY", question: { en: "What is something you've learned about people through the ministry?", tl: "Ano ang isang natutuhan mo tungkol sa tao dahil sa ministeryo?" } },
-  76: { cat: "MINISTRY", question: { en: "Have you ever had a conversation in the ministry that surprised you?", tl: "Nagkaroon ka na ba ng pag-uusap sa ministeryo na nagulat ka?" } },
-  77: { cat: "MINISTRY", question: { en: "What personally motivates you to keep sharing your faith with others?", tl: "Ano ang talagang nag-uudyok sa iyo para ipagpatuloy ang pagbabahagi ng pananampalataya mo sa iba?" } },
-  78: { cat: "MINISTRY", question: { en: "What is one thing you'd like to improve about how you talk to people in the ministry?", tl: "Ano ang isang bagay na gusto mong pagbutihin sa paraan mo ng pakikipag-usap sa tao sa ministeryo?" } },
-  79: { cat: "MINISTRY", question: { en: "How has doing the ministry affected your own faith?", tl: "Paano naapektuhan ng paggawa ng ministeryo ang sarili mong pananampalataya?" } },
-  80: { cat: "MINISTRY", question: { en: "Who is someone you met in the ministry that you still think about?", tl: "Sino ang isang taong nakilala mo sa ministeryo na naiisip mo pa rin hanggang ngayon?" } },
-  81: { cat: "MINISTRY", question: { en: "What helps you feel more confident when starting a conversation about the Bible?", tl: "Ano ang nakakatulong sa iyo para maging mas kumpiyansa kapag nagsisimula ng pag-uusap tungkol sa Bibliya?" } },
-  82: { cat: "SPIRITUAL_GROWTH", question: { en: "What is one thing you personally want to improve spiritually?", tl: "Ano ang isang espirituwal na routine na gusto mong pagbutihin?" } },
-  83: { cat: "SPIRITUAL_GROWTH", question: { en: "What is one spiritual goal you personally want to achieve?", tl: "Ano ang isang espirituwal na goal na gusto mong maabot?" } },
-  84: { cat: "SPIRITUAL_GROWTH", question: { en: "What is a habit you'd like to become more consistent with?", tl: "Ano ang isang gawain na gusto mong mas maging consistent sa paggawa?" } },
-  85: { cat: "SPIRITUAL_GROWTH", question: { en: "How do you personally measure whether you're growing spiritually?", tl: "Paano mo sinusukat kung lumalago ka ba nang espirituwal?" } },
-  86: { cat: "SPIRITUAL_GROWTH", question: { en: "What is a weakness you're working on that you're comfortable sharing?", tl: "Ano ang isang kahinaan na sinisikap mong lutasin na komportable kang ibahagi?" } },
-  87: { cat: "SPIRITUAL_GROWTH", question: { en: "What would you like to change or improve about yourself as a Christian?", tl: "Ano ang gusto mong baguhin o pagbutihin sa sarili mo bilang Kristiyano?" } },
-  88: { cat: "SPIRITUAL_GROWTH", question: { en: "What is a piece of counsel that helped you grow in an area you struggled with?", tl: "Anong payo ang nakatulong sa iyo na lumago sa isang bagay na nahihirapan ka?" } },
-  89: { cat: "SPIRITUAL_GROWTH", question: { en: "If you could improve one spiritual habit overnight, which would it be?", tl: "Kung may maaari kang pagbutihing isang espirituwal na gawi kaagad, ano kaya ito?" } },
-  90: { cat: "SPIRITUAL_GROWTH", question: { en: "What does spiritual maturity look like to you personally?", tl: "Ano ang hitsura ng espirituwal na pagkahinog para sa iyo?" } },
-  91: { cat: "SPIRITUAL_GROWTH", question: { en: "What is something you used to struggle with spiritually that has gotten easier over time?", tl: "Ano ang isang bagay na dati mong nahihirapan sa espirituwal na naging mas madali na sa paglipas ng panahon?" } },
-  92: { cat: "FUTURE_HOPE", question: { en: "What part of Jehovah's promises for the future means the most to you?", tl: "Aling pangako ni Jehova para sa hinaharap ang may pinakamalaking kahulugan para sa iyo?" } },
-  93: { cat: "FUTURE_HOPE", question: { en: "How does your hope for the future affect how you live today?", tl: "Paano nakaaapekto ang pag-asa mo para sa hinaharap sa paraan ng pamumuhay mo ngayon?" } },
-  94: { cat: "FUTURE_HOPE", question: { en: "What are you personally most looking forward to in the new world?", tl: "Ano ang pinaka-inaasam mo sa bagong sanlibutan?" } },
-  95: { cat: "FUTURE_HOPE", question: { en: "If you could achieve one thing this year spiritually, what would it be?", tl: "Kung may isang bagay kang maaabot ngayong taon sa espirituwal, ano kaya ito?" } },
-  96: { cat: "FUTURE_HOPE", question: { en: "What would you want to say to Jehovah if you saw him today?", tl: "Ano ang gusto mong sabihin kay Jehova kung makikita mo siya ngayon?" } },
-  97: { cat: "FUTURE_HOPE", question: { en: "Who do you hope to see again because of the resurrection?", tl: "Sino ang inaasam mong makitang muli dahil sa pagkabuhay-muli?" } },
-  98: { cat: "FUTURE_HOPE", question: { en: "What is one thing you want to do this week to strengthen your friendship with Jehovah?", tl: "Ano ang isang bagay na gagawin mo ngayong linggo para patibayin ang pagkakaibigan mo kay Jehova?" } },
-  99: { cat: "FUTURE_HOPE", question: { en: "How do you personally picture your life five years from now, spiritually?", tl: "Paano mo nakikita ang buhay mo sa loob ng limang taon, sa espirituwal?" } },
-  100: { cat: "FUTURE_HOPE", question: { en: "What keeps your hope for the future strong even when things are hard right now?", tl: "Ano ang nagpapanatiling matatag ang pag-asa mo para sa hinaharap kahit mahirap ang kasalukuyan?" } },
+  2: { cat: "PERSONAL_FAITH", question: { en: "When do you personally feel closest to Jehovah?", tl: "Kailan mo personal na pinakanararamdaman na malapít ka kay Jehova?" } },
+  3: { cat: "PERSONAL_FAITH", question: { en: "What has strengthened your faith the most in your life?", tl: "Ano ang nakapagpatibay ng pananampalataya mo sa buhay?" } },
+  4: { cat: "PERSONAL_FAITH", question: { en: "What quality of Jehovah would you like to develop more in yourself?", tl: "Anong katangian ni Jehova ang gusto mong higit pang malinang sa sarili mo?" } },
+  5: { cat: "PERSONAL_FAITH", question: { en: "What is something about Jehovah that you would like to understand better?", tl: "Ano ang isang bagay tungkol kay Jehova na gusto mong mas maunawaan?" } },
+  6: { cat: "PERSONAL_FAITH", question: { en: "How do you personally show Jehovah that your relationship with him is important to you?", tl: "Paano mo personal na pinapakita kay Jehova na mahalaga sa iyo ang relasyon ninyo?" } },
+  7: { cat: "PERSONAL_FAITH", question: { en: "What experience has helped strengthen your faith?", tl: "Anong karanasan ang nakatulong para maging mas matibay ang pananampalataya mo?" } },
+  8: { cat: "PERSONAL_FAITH", question: { en: "What helps you when you feel that your faith is becoming weaker?", tl: "Ano ang nakakatulong sa iyo kapag nararamdaman mong nanghihina ang pananampalataya mo?" } },
+  9: { cat: "PERSONAL_FAITH", question: { en: "What is something you have learned about Jehovah that you will never forget?", tl: "Ano ang isang bagay na natutuhan mo tungkol kay Jehova na hindi mo makakalimutan?" } },
+  10: { cat: "PERSONAL_FAITH", question: { en: "If you had to describe your relationship with Jehovah in one word, what would it be and why?", tl: "Kung ilalarawan mo ang relasyon mo kay Jehova sa isang salita, ano iyon at bakit?" } },
+  11: { cat: "PRAYER", question: { en: "What do you personally enjoy most about prayer?", tl: "Ano ang pinakagusto mo sa pananalangin?" } },
+  12: { cat: "PRAYER", question: { en: "When do you usually feel the strongest need to pray?", tl: "Kailan mo karaniwang pinakamalakas na nararamdaman ang pangangailangang manalangin?" } },
+  13: { cat: "PRAYER", question: { en: "How has prayer personally helped you during a difficult time?", tl: "Paano ka personal na natulungan ng panalangin sa panahon ng mahirap na sitwasyon?" } },
+  14: { cat: "PRAYER", question: { en: "What is something you often thank Jehovah for?", tl: "Ano ang isang bagay na madalas mong ipinagpapasalamat kay Jehova?" } },
+  15: { cat: "PRAYER", question: { en: "What helps you maintain a regular prayer routine?", tl: "Ano ang nakakatulong sa iyo para mapanatili ang regular na routine sa pananalangin?" } },
+  16: { cat: "PRAYER", question: { en: "Have you ever felt closer to Jehovah because of something you prayed about?", tl: "Naranasan mo na bang mas mapalapit kay Jehova dahil sa isang bagay na ipinanalangin mo?" } },
+  17: { cat: "PRAYER", question: { en: "What is the most difficult part of maintaining a good prayer routine for you?", tl: "Ano ang pinakamahirap na bahagi ng pagpapanatili ng magandang routine sa pananalangin para sa iyo?" } },
+  18: { cat: "PRAYER", question: { en: "How does your prayer change when you are going through a difficult situation?", tl: "Paano nagbabago ang panalangin mo kapag dumaranas ka ng mahirap na sitwasyon?" } },
+  19: { cat: "PRAYER", question: { en: "What would you like to improve about your personal prayers?", tl: "Ano ang gusto mong pagbutihin sa personal mong mga panalangin?" } },
+  20: { cat: "PRAYER", question: { en: "What is something you wish you talked to Jehovah about more often?", tl: "Ano ang isang bagay na sana ay mas madalas mong napag-uusapan kay Jehova?" } },
+  21: { cat: "BIBLE", question: { en: "What part of the Bible has personally had the biggest impact on you?", tl: "Anong bahagi ng Bibliya ang personal na may pinakamalaking epekto sa iyo?" } },
+  22: { cat: "BIBLE", question: { en: "Is there a Bible verse you often remember when you are facing a problem?", tl: "May teksto ba sa Bibliya na madalas mong naaalala kapag may problema ka?" } },
+  23: { cat: "BIBLE", question: { en: "What do you enjoy most about personal Bible study?", tl: "Ano ang pinakagusto mo sa personal na pag-aaral ng Bibliya?" } },
+  24: { cat: "BIBLE", question: { en: "What helps you stay consistent with Bible reading?", tl: "Ano ang nakakatulong sa iyo para maging consistent sa pagbabasa ng Bibliya?" } },
+  25: { cat: "BIBLE", question: { en: "How has something you recently learned from the Bible affected you personally?", tl: "Paano ka personal na naapektuhan ng isang bagay na kamakailan mong natutuhan mula sa Bibliya?" } },
+  26: { cat: "BIBLE", question: { en: "Which Bible character has a quality you would like to imitate?", tl: "Sinong Bible character ang may katangiang gusto mong tularan?" } },
+  27: { cat: "BIBLE", question: { en: "Which Bible account has stayed in your mind the most, and why?", tl: "Anong Bible account ang pinakananatili sa isip mo, at bakit?" } },
+  28: { cat: "BIBLE", question: { en: "What is something in the Bible you would like to study more deeply?", tl: "Ano ang isang bagay sa Bibliya na gusto mong pag-aralan nang mas malalim?" } },
+  29: { cat: "BIBLE", question: { en: "How does the Bible help you when you have to make an important decision?", tl: "Paano ka tinutulungan ng Bibliya kapag kailangan mong gumawa ng mahalagang desisyon?" } },
+  30: { cat: "BIBLE", question: { en: "What is something you learned from the Bible that changed the way you see life?", tl: "Ano ang isang bagay na natutuhan mo sa Bibliya na nagbago sa pananaw mo sa buhay?" } },
+  31: { cat: "GRATITUDE", question: { en: "What is one thing you are especially thankful to Jehovah for right now?", tl: "Ano ang isang bagay na lubos mong ipinagpapasalamat kay Jehova ngayon?" } },
+  32: { cat: "GRATITUDE", question: { en: "Who is someone in your life that you are especially thankful for, and why?", tl: "Sino ang isang tao sa buhay mo na lubos mong ipinagpapasalamat, at bakit?" } },
+  33: { cat: "GRATITUDE", question: { en: "What is a simple thing you sometimes take for granted but truly appreciate?", tl: "Ano ang isang simpleng bagay na minsan ay binabalewala mo pero tunay mong pinahahalagahan?" } },
+  34: { cat: "GRATITUDE", question: { en: "What is a blessing you have received that you will never forget?", tl: "Ano ang isang pagpapalang natanggap mo na hindi mo makakalimutan?" } },
+  35: { cat: "GRATITUDE", question: { en: "When was the last time you felt especially grateful to Jehovah?", tl: "Kailan ka huling nakaramdam ng matinding pasasalamat kay Jehova?" } },
+  36: { cat: "GRATITUDE", question: { en: "What is something about your congregation that you are thankful for?", tl: "Ano ang isang bagay tungkol sa inyong kongregasyon na ipinagpapasalamat mo?" } },
+  37: { cat: "GRATITUDE", question: { en: "What spiritual blessing means the most to you?", tl: "Anong espirituwal na pagpapala ang pinakamahalaga sa iyo?" } },
+  38: { cat: "GRATITUDE", question: { en: "What is something you did not appreciate much before but value more now?", tl: "Ano ang isang bagay na dati ay hindi mo gaanong pinahahalagahan pero mas pinahahalagahan mo ngayon?" } },
+  39: { cat: "GRATITUDE", question: { en: "How does gratitude help you stay positive spiritually?", tl: "Paano nakakatulong ang pagiging mapagpasalamat para manatili kang positibo sa espirituwal?" } },
+  40: { cat: "GRATITUDE", question: { en: "What is something you would like to learn to appreciate more?", tl: "Ano ang isang bagay na gusto mong matutuhang mas pahalagahan?" } },
+  41: { cat: "CHALLENGES", question: { en: "What usually discourages you the most?", tl: "Ano ang karaniwang pinakanakapagpapahina ng loob mo?" } },
+  42: { cat: "CHALLENGES", question: { en: "What do you do when you feel distant from Jehovah?", tl: "Ano ang ginagawa mo kapag nararamdaman mong malayo ka kay Jehova?" } },
+  43: { cat: "CHALLENGES", question: { en: "What helps you when you are under stress or pressure?", tl: "Ano ang nakakatulong sa iyo kapag nasa ilalim ka ng stress o pressure?" } },
+  44: { cat: "CHALLENGES", question: { en: "What difficult experience taught you an important lesson?", tl: "Anong mahirap na karanasan ang nagturo sa iyo ng mahalagang aral?" } },
+  45: { cat: "CHALLENGES", question: { en: "How do you maintain your spiritual routine when you are extremely busy?", tl: "Paano mo napapanatili ang espirituwal mong routine kapag sobrang dami mong ginagawa?" } },
+  46: { cat: "CHALLENGES", question: { en: "What is one weakness you are personally trying to overcome?", tl: "Ano ang isang kahinaan na personal mong sinisikap na mapagtagumpayan?" } },
+  47: { cat: "CHALLENGES", question: { en: "What do you do when you lose motivation?", tl: "Ano ang ginagawa mo kapag nawawalan ka ng motivation?" } },
+  48: { cat: "CHALLENGES", question: { en: "What helps you keep going when things become difficult?", tl: "Ano ang nakakatulong sa iyo para magpatuloy kapag nagiging mahirap ang mga bagay?" } },
+  49: { cat: "CHALLENGES", question: { en: "What difficult experience eventually helped you grow spiritually?", tl: "Anong mahirap na karanasan ang kalaunan ay nakatulong sa espirituwal mong paglago?" } },
+  50: { cat: "CHALLENGES", question: { en: "What have you learned about yourself from going through a difficult situation?", tl: "Ano ang natutuhan mo tungkol sa sarili mo mula sa isang mahirap na sitwasyon?" } },
+  51: { cat: "FAMILY", question: { en: "How has your family influenced your faith?", tl: "Paano nakaimpluwensiya ang pamilya mo sa pananampalataya mo?" } },
+  52: { cat: "FAMILY", question: { en: "What is something about faith that you learned from your family?", tl: "Ano ang isang bagay tungkol sa pananampalataya na natutuhan mo mula sa pamilya mo?" } },
+  53: { cat: "FAMILY", question: { en: "What would you like to improve about your family's spiritual routine?", tl: "Ano ang gusto mong pagbutihin sa espirituwal na routine ng pamilya ninyo?" } },
+  54: { cat: "FAMILY", question: { en: "How do you show your family that spiritual things are important to you?", tl: "Paano mo ipinapakita sa pamilya mo na mahalaga sa iyo ang espirituwal na mga bagay?" } },
+  55: { cat: "FAMILY", question: { en: "What is one family memory that has special meaning to you?", tl: "Ano ang isang family memory na may espesyal na kahulugan sa iyo?" } },
+  56: { cat: "FAMILY", question: { en: "Who in your family has been a good spiritual example to you, and why?", tl: "Sino sa pamilya mo ang naging magandang espirituwal na halimbawa sa iyo, at bakit?" } },
+  57: { cat: "FAMILY", question: { en: "What is something you would like your family to do together more often?", tl: "Ano ang isang bagay na gusto mong mas madalas gawin ng pamilya ninyo nang sama-sama?" } },
+  58: { cat: "FAMILY", question: { en: "How would you like to be a positive spiritual influence on your family?", tl: "Paano mo ka magiging maganda impluwensiya sa espirituwal sa pamilya mo?" } },
+  59: { cat: "FAMILY", question: { en: "What has your family taught you about love?", tl: "Ano ang itinuro sa iyo ng pamilya mo tungkol sa pag-ibig?" } },
+  60: { cat: "FAMILY", question: { en: "What is one thing about your family that you are especially thankful for?", tl: "Ano ang isang bagay tungkol sa pamilya mo na lubos mong ipinagpapasalamat?" } },
+  61: { cat: "FRIENDSHIPS", question: { en: "What do you look for in a good friend?", tl: "Ano ang hinahanap mo sa isang mabuting kaibigan?" } },
+  62: { cat: "FRIENDSHIPS", question: { en: "How has a friendship influenced your faith?", tl: "Paano nakaimpluwensiya ang isang pagkakaibigan sa pananampalataya mo?" } },
+  63: { cat: "FRIENDSHIPS", question: { en: "Who is one friend who has strengthened you spiritually, and how?", tl: "Sino ang isang kaibigan na nagpatibay sa iyo sa espirituwal, at paano?" } },
+  64: { cat: "FRIENDSHIPS", question: { en: "What do you personally do to be a good spiritual friend?", tl: "Ano ang personal mong ginagawa para maging mabuting espirituwal na kaibigan?" } },
+  65: { cat: "FRIENDSHIPS", question: { en: "Has a friend ever helped you when you were feeling discouraged? What did they do?", tl: "May kaibigan na ba na tumulong sa iyo noong pinanghihinaan ka ng loob? Ano ang ginawa niya?" } },
+  66: { cat: "FRIENDSHIPS", question: { en: "What quality in a good friend would you like to develop more in yourself?", tl: "Anong katangian ng isang mabuting kaibigan ang gusto mong higit pang malinang sa sarili mo?" } },
+  67: { cat: "FRIENDSHIPS", question: { en: "How can you tell whether a friendship is having a positive influence on you?", tl: "Paano mo malalaman kung maganda ang impluwensiya ng isang pagkakaibigan sa iyo?" } },
+  68: { cat: "FRIENDSHIPS", question: { en: "What is one important lesson you have learned from a friendship?", tl: "Ano ang isang mahalagang aral na natutuhan mo mula sa isang pagkakaibigan?" } },
+  69: { cat: "FRIENDSHIPS", question: { en: "How can you personally strengthen a friend's spirituality?", tl: "Paano mo personal na mapapatibay ang espirituwalidad ng isang kaibigan?" } },
+  70: { cat: "FRIENDSHIPS", question: { en: "What is something you especially appreciate about your friends?", tl: "Ano ang isang bagay na lubos mong pinahahalagahan sa mga kaibigan mo?" } },
+  71: { cat: "CONGREGATION", question: { en: "What do you personally enjoy most about being part of the congregation?", tl: "Ano ang pinakagusto mo sa pagiging bahagi ng kongregasyon?" } },
+  72: { cat: "CONGREGATION", question: { en: "Who is one brother or sister who has been a good example to you?", tl: "Sino ang isang kapatid na naging magandang halimbawa sa iyo?" } },
+  73: { cat: "CONGREGATION", question: { en: "When have you felt most connected to your congregation?", tl: "Kailan mo pinakanaramdaman na malapít ka sa inyong kongregasyon?" } },
+  74: { cat: "CONGREGATION", question: { en: "What do other brothers and sisters do that really encourages you?", tl: "Ano ang ginagawa ng ibang mga kapatid na talagang nakakapagpatibay sa iyo?" } },
+  75: { cat: "CONGREGATION", question: { en: "How do you personally show love for your brothers and sisters?", tl: "Paano mo personal na ipinapakita ang pagmamahal sa mga kapatid?" } },
+  76: { cat: "CONGREGATION", question: { en: "What is one thing you would like to do more often to help the congregation?", tl: "Ano ang isang bagay na gusto mong mas madalas gawin para makatulong sa kongregasyon?" } },
+  77: { cat: "CONGREGATION", question: { en: "What is one congregation experience you will never forget?", tl: "Ano ang isang karanasan sa kongregasyon na hindi mo makakalimutan?" } },
+  78: { cat: "CONGREGATION", question: { en: "What is something valuable you have learned from another brother or sister?", tl: "Ano ang isang mahalagang bagay na natutuhan mo mula sa ibang kapatid?" } },
+  79: { cat: "CONGREGATION", question: { en: "How do you personally encourage someone who is feeling discouraged?", tl: "Paano mo personal na pinapatibay ang isang taong pinanghihinaan ng loob?" } },
+  80: { cat: "CONGREGATION", question: { en: "What kind of effect would you like your presence to have on the congregation?", tl: "Anong uri ng epekto ang gusto mong magkaroon ang presensiya mo sa kongregasyon?" } },
+  81: { cat: "MINISTRY", question: { en: "What do you personally enjoy most about the ministry?", tl: "Ano ang pinakagusto mo sa ministeryo?" } },
+  82: { cat: "MINISTRY", question: { en: "What is one ministry experience you will never forget?", tl: "Ano ang isang karanasan sa ministeryo na hindi mo makakalimutan?" } },
+  83: { cat: "MINISTRY", question: { en: "What helps you have courage when you participate in the ministry?", tl: "Ano ang nakakatulong sa iyo para magkaroon ng lakas ng loob kapag nakikibahagi ka sa ministeryo?" } },
+  84: { cat: "MINISTRY", question: { en: "What is one thing you would like to improve in your ministry?", tl: "Ano ang isang bagay na gusto mong pagbutihin sa ministeryo mo?" } },
+  85: { cat: "MINISTRY", question: { en: "How has talking to others about the Bible strengthened your own faith?", tl: "Paano nakapagpatibay sa sarili mong pananampalataya ang pakikipag-usap sa iba tungkol sa Bibliya?" } },
+  86: { cat: "MINISTRY", question: { en: "What have you learned about people through your experiences in the ministry?", tl: "Ano ang natutuhan mo tungkol sa mga tao mula sa mga karanasan mo sa ministeryo?" } },
+  87: { cat: "MINISTRY", question: { en: "What helps you when you feel nervous before going in the ministry?", tl: "Ano ang nakakatulong sa iyo kapag kinakabahan ka bago magministeryo?" } },
+  88: { cat: "MINISTRY", question: { en: "Has an experience in the ministry ever strengthened your faith? How?", tl: "May karanasan ba sa ministeryo na nakapagpatibay sa pananampalataya mo? Paano?" } },
+  89: { cat: "MINISTRY", question: { en: "What is one personal goal you have for your ministry?", tl: "Ano ang isang personal na goal mo sa ministeryo?" } },
+  90: { cat: "MINISTRY", question: { en: "What would make the ministry more enjoyable for you?", tl: "Ano ang makakapagpasaya o makakapag-enjoy sa iyo nang higit sa ministeryo?" } },
+  91: { cat: "SPIRITUAL_GROWTH", question: { en: "What is one spiritual goal you personally want to achieve?", tl: "Ano ang isang espirituwal na goal na personal mong gustong maabot?" } },
+  92: { cat: "SPIRITUAL_GROWTH", question: { en: "What is one thing you want to change or improve about yourself as a Christian?", tl: "Ano ang isang bagay na gusto mong baguhin o pagbutihin sa sarili mo bilang Kristiyano?" } },
+  93: { cat: "SPIRITUAL_GROWTH", question: { en: "What spiritual habit would you like to become more consistent with?", tl: "Anong espirituwal na habit ang gusto mong maging mas consistent?" } },
+  94: { cat: "SPIRITUAL_GROWTH", question: { en: "What Christian quality would you like to develop more?", tl: "Anong katangiang Kristiyano ang gusto mong higit pang malinang?" } },
+  95: { cat: "SPIRITUAL_GROWTH", question: { en: "Where would you like your spirituality to be one year from now?", tl: "Saan mo gustong makita ang espirituwalidad mo isang taon mula ngayon?" } },
+  96: { cat: "SPIRITUAL_GROWTH", question: { en: "What is one thing you would like to become better at in your service to Jehovah?", tl: "Ano ang isang bagay na gusto mong maging mas mahusay sa paggawa bilang paglilingkod kay Jehova?" } },
+  97: { cat: "SPIRITUAL_GROWTH", question: { en: "What would you like people to remember about you as a Christian?", tl: "Ano ang gusto mong maalala ng mga tao tungkol sa iyo bilang isang Kristiyano?" } },
+  98: { cat: "SPIRITUAL_GROWTH", question: { en: "What is one thing you would like to do more often to make Jehovah happy?", tl: "Ano ang isang bagay na gusto mong mas madalas gawin para mapasaya si Jehova?" } },
+  99: { cat: "SPIRITUAL_GROWTH", question: { en: "What is the most important spiritual goal you have right now?", tl: "Ano ang pinakamahalagang espirituwal na goal mo ngayon?" } },
+  100: { cat: "SPIRITUAL_GROWTH", question: { en: "If you could give your future self one piece of advice about faith, what would you say?", tl: "Kung mabibigyan mo ng isang payo tungkol sa pananampalataya ang future version ng sarili mo, ano ang sasabihin mo?" } },
 };
 const TOTAL_QUESTIONS = 100;
 
@@ -132,8 +132,7 @@ const CATEGORIES = {
   FRIENDSHIPS:       { en: "FRIENDSHIPS",      tl: "PAGKAKAIBIGAN" },
   CONGREGATION:      { en: "CONGREGATION",     tl: "KONGREGASYON" },
   MINISTRY:          { en: "MINISTRY",         tl: "MINISTERYO" },
-  SPIRITUAL_GROWTH:  { en: "SPIRITUAL GROWTH", tl: "ESPIRITUWAL NA PAGLAGO" },
-  FUTURE_HOPE:       { en: "FUTURE & HOPE",    tl: "HINAHARAP AT PAG-ASA" }
+  SPIRITUAL_GROWTH:  { en: "SPIRITUAL GROWTH", tl: "ESPIRITUWAL NA PAGLAGO" }
 };
 
 /* Subtle per-category accent used only for the popup badge/border.
@@ -149,8 +148,7 @@ const CATEGORY_ACCENTS = {
   FRIENDSHIPS:      "#e0788f",
   CONGREGATION:     "#4caf82",
   MINISTRY:         "#4a90c9",
-  SPIRITUAL_GROWTH: "#5fc7a3",
-  FUTURE_HOPE:      "#e0b93f"
+  SPIRITUAL_GROWTH: "#5fc7a3"
 };
 
 /* ---------- 3. UI STRINGS (bilingual static text) ---------- */
@@ -316,8 +314,8 @@ function applyLanguage(lang) {
   updateHistoryUI();
 
   // If the question modal is currently open, re-render it in the new language.
-  if (!modalBackdrop.hidden && state.used.length) {
-    renderQuestionModal(state.used[state.used.length - 1]);
+  if (!modalBackdrop.hidden && currentModalNumber !== null) {
+    renderQuestionModal(currentModalNumber);
   }
 
   saveState();
@@ -591,6 +589,12 @@ const modalCard = document.getElementById("modal-card");
 const completeBackdrop = document.getElementById("complete-backdrop");
 const confirmBackdrop = document.getElementById("confirm-backdrop");
 
+// Which number is currently shown in the modal (so a language switch
+// re-renders the right one), and whether it was opened from the history
+// strip (read-only recap) rather than from an actual spin result.
+let currentModalNumber = null;
+let modalIsHistoryView = false;
+
 // Fills in the question modal's text for the given number, in the current
 // language — used both when a spin lands and when the language is switched
 // while the modal is already open.
@@ -607,6 +611,24 @@ function renderQuestionModal(number) {
 }
 
 function openQuestionModal(number) {
+  currentModalNumber = number;
+  modalIsHistoryView = false;
+  renderQuestionModal(number);
+
+  modalBackdrop.hidden = false;
+  window.requestAnimationFrame(() => modalCard.focus());
+  document.addEventListener("keydown", handleEscapeKey);
+}
+
+// Opens the same popup in read-only recap mode for a number the user has
+// already answered — used when they tap a chip in the USED/NAGAMIT NA
+// history strip. Closing it never re-enables the spin button or triggers
+// the completion screen, since it isn't a live spin result.
+function openHistoryQuestion(number) {
+  if (!state.used.includes(number)) return;
+
+  currentModalNumber = number;
+  modalIsHistoryView = true;
   renderQuestionModal(number);
 
   modalBackdrop.hidden = false;
@@ -617,6 +639,11 @@ function openQuestionModal(number) {
 function closeQuestionModal() {
   modalBackdrop.hidden = true;
   document.removeEventListener("keydown", handleEscapeKey);
+
+  if (modalIsHistoryView) {
+    modalIsHistoryView = false;
+    return;
+  }
 
   if (state.pool.length === 0) {
     window.setTimeout(openCompletionModal, 200);
@@ -715,9 +742,20 @@ function updateHistoryUI() {
   }
   wrap.hidden = false;
 
-  // Most recent first, numbers only — never questions.
-  const chips = [...state.used].reverse().map(n => `<span class="history-chip">${n}</span>`).join("");
+  // Most recent first, numbers only — never questions. Each chip is a
+  // real button so a tap re-opens that question in read-only recap mode.
+  const chips = [...state.used].reverse()
+    .map(n => `<button type="button" class="history-chip" data-number="${n}">${n}</button>`)
+    .join("");
   list.innerHTML = chips;
+}
+
+function initHistoryControls() {
+  document.getElementById("history-list").addEventListener("click", (e) => {
+    const chip = e.target.closest(".history-chip");
+    if (!chip) return;
+    openHistoryQuestion(Number(chip.dataset.number));
+  });
 }
 
 /* ---------- 11. INIT ---------- */
@@ -742,6 +780,7 @@ function init() {
   initThemeControls();
   initLanguageControls();
   initModalControls();
+  initHistoryControls();
 
   document.getElementById("spin-btn").addEventListener("click", spin);
 
