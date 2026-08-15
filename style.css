@@ -122,10 +122,18 @@ body[data-mode="light"] {
 }
 .brand { display: flex; align-items: center; gap: 10px; }
 .brand-mark {
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
+  width: 26px; height: 26px;
+  flex-shrink: 0;
+  background-color: var(--accent);
+  -webkit-mask-image: url('logo.png');
+  mask-image: url('logo.png');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--accent) 35%, transparent));
 }
 .brand-text {
   font-family: 'Fraunces', serif;
@@ -405,6 +413,14 @@ body[data-mode="dark"] .icon-moon { display: block; }
   font-size: 12px;
   font-weight: 700;
   color: var(--text-muted);
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, transform .12s ease;
+}
+.history-chip:hover,
+.history-chip:focus-visible {
+  color: var(--text);
+  background: color-mix(in srgb, var(--accent) 16%, var(--bg-elevated));
+  transform: translateY(-1px);
 }
 
 .page-footer {
@@ -465,6 +481,26 @@ body[data-mode="dark"] .icon-moon { display: block; }
   transition: color .15s ease, background .15s ease;
 }
 .modal-close:hover { color: var(--text); background: color-mix(in srgb, var(--cat-accent) 16%, var(--bg-elevated)); }
+
+.modal-lang-picker {
+  position: absolute;
+  top: 16px; left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--card-border);
+}
+.modal-lang-picker .lang-btn {
+  padding: 5px 10px;
+  font-size: 10px;
+}
+.modal-lang-picker .lang-btn[aria-pressed="true"] {
+  background: var(--cat-accent);
+  color: var(--accent-contrast);
+}
 
 .modal-badge {
   display: inline-block;
@@ -560,6 +596,7 @@ body[data-mode="dark"] .icon-moon { display: block; }
   .theme-swatch { width: 16px; height: 16px; }
   .lang-btn { padding: 5px 9px; font-size: 10px; }
   .brand-text { font-size: 13px; }
+  .brand-mark { width: 22px; height: 22px; }
   .wheel-wrap { width: 82vw; }
   .spin-btn { padding: 16px 48px; font-size: 15.5px; width: min(280px, 78vw); }
   .history-list { max-width: 60vw; }
