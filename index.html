@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-<title>Faith Talk &mdash; Roulette</title>
-<link rel="icon" type="image/png" href="./favicon.png?v=2">
-<meta name="description" content="Faith Talk Roulette — 100 randomized conversation questions, no repeats.">
+<title>Faith Talk &mdash; Ikutin ang Roulette</title>
+<meta name="description" content="Faith Talk Roulette — 100 personal na tanong para sa makabuluhang pag-uusap, Tagalog at English.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 
 <!-- Fonts: a quiet serif for the numerals/display, a clean grotesk for UI text -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -104,6 +106,10 @@
   <!-- ============ QUESTION MODAL ============ -->
   <div class="modal-backdrop" id="modal-backdrop" hidden>
     <div class="modal-card" id="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-question-number" tabindex="-1">
+      <div class="modal-lang-picker" role="group" aria-label="Piliin ang wika / Choose language">
+        <button class="lang-btn" data-lang-choice="tl" aria-label="Tagalog" aria-pressed="true">TL</button>
+        <button class="lang-btn" data-lang-choice="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
       <button class="modal-close" id="modal-close" aria-label="Close question">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg>
       </button>
