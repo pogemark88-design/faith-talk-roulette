@@ -3,7 +3,7 @@
 
 A clean, modern roulette wheel for Faith Talk conversation nights. Spin the wheel, land on a number 1–100, and a themed popup reveals that number's category and question. Every number is removed from the pool once used, so a game never repeats a question.
 
-The 100 questions are personal and reflective ("Faith Talk Personal") rather than textbook-style, and every question is available in **Tagalog (default) and English** via the language switcher in the top bar.
+The 100 questions are personal and reflective, ("Faith Talk Personal") rather than textbook-style, and every question is available in **Tagalog (default) and English** via the language switcher in the top bar.
 
 **100% static** — HTML, CSS, and vanilla JavaScript only. No build step, no dependencies, no backend. Works out of the box on GitHub Pages.
 
